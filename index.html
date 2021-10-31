@@ -2,42 +2,65 @@
 <html>
   <head>
     <link rel="stylesheet" href="css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="wrapper">
+    <!-- the main contents of the website should all be contained within this wrapper -->
+    <div class="wrapper" data-barba="wrapper">
+      <!-- introductory header -->
       <div class="header">
         hi, this is ramy. please pick a song.
       </div>
-      <div class="sidebar">
+      <!-- sidebar with core profile information -->
+      <div class="sidebar" data-barba="container" data-barba-namespace="home">
         insert my sidebar here
       </div>
-      <div class="playlist">
+      <!-- "playlist" section which is really just the navigation to different sections of the website -->
+      <div class="playlist" data-barba="container" data-barba-namespace="home">
+        <!-- playlist info goes here -->
         <div class="playlist_cover"><img src="assets/playlist_cover.png"></div>
         <div class="playlist_name"><h3>
           pov: ur on my personal website
         </h3></div>
-        <div class="playlist_author"><h4>ramy zhang</h4></div>
-        <div class="playlist_description">a little playlist about...</div>
+        <div class="playlist_actions">
+          <!-- icons courtesy of octicons by github! <3 -->
+          <div class="heart_icon">
+            <svg id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 01-.686 0 16.709 16.709 0 01-.465-.252 31.147 31.147 0 01-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0114 20.408z"></path></svg>
+          </div>
+          <div class="share_icon">
+            <svg id="share" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M20 5.5a3.5 3.5 0 01-6.062 2.385l-5.112 3.021a3.497 3.497 0 010 2.188l5.112 3.021a3.5 3.5 0 11-.764 1.29l-5.112-3.02a3.5 3.5 0 110-4.77l5.112-3.021v.001A3.5 3.5 0 1120 5.5zm-1.5 0a2 2 0 11-4 0 2 2 0 014 0zM5.5 14a2 2 0 100-4 2 2 0 000 4zm13 4.5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+          </div>
+        </div>
+        <div class="playlist_description"><p>a little playlist about...</p></div>
+        <!-- links to different parts of website should be contained here -->
         <div class="playlist_songs">
-          <div class="song">
-            <a href="index.html"><img src="assets/playlist_cover.png"></a>
-            <p>song 1</p></div>
-          <div class="song">
-            <a href="index.html"><img src="assets/playlist_cover.png"></a>
-            <p>song 1</p></div>
-          <div class="song">
-            <a href="index.html"><img src="assets/playlist_cover.png"></a>
-            <p>song 1</p></div>
-          <div class="song">
-            <a href="index.html"><img src="assets/playlist_cover.png"></a>
-            <p>song 1</p></div>
+          <div class="song" id="0">
+            <img src="assets/playlist_cover.png">
+            <p><a class="song_link" href="https://google.com">song 1</a></p>
+            <p id="song_length">2:03</p></div>
+          <div class="song" id="1">
+            <img src="assets/playlist_cover.png">
+            <p><a class="song_link" href="https://youtube.com">song 2</a></p>
+            <p id="song_length">2:03</p></div>
+          <div class="song" id="2">
+            <img src="assets/playlist_cover.png">
+            <p><a class="song_link" href="index.html">song 3</a></p>
+            <p id="song_length">2:03</p></div>
+          <div class="song" id="3">
+            <img src="assets/playlist_cover.png">
+            <p><a class="song_link" href="index.html">song 4</a></p>
+            <p id="song_length">2:03</p></div>
         </div>
-        <div class="playlist_play">
-          <div class="go_back"><a href="index.html"><img src="assets/play_button_min.png"></a></div>
-          <div class="pause_play"><a href="index.html"><img src="assets/play_button.png"></a></div>
-          <div class="go_forward"><a href="index.html"><img src="assets/play_button_min.png"></a></div>
-        </div>
+        <!-- music player-like buttons go here -->
+        <div class="player_buttons"><a id="go_back" href="index.html"><img src="assets/play_button_min.png"></a></div>
+        <div class="player_buttons"><a id="pause_play" href="index.html"><img src="assets/play_button.png"></a></div>
+        <div class="player_buttons"><a id="go_forward" href="index.html"><img src="assets/play_button_min.png"></a></div>
       </div>
     </div>
+  <script src="/js/main.js"></script>
+  <script src="/node_modules/animejs/lib/anime.min.js"></script>
+  <script type="module" src="/js/pageanimations.js"></script>
   </body>
 </html>
