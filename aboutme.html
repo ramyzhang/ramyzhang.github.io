@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/aboutme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- the main contents of the website should all be contained within this wrapper -->
+    <div class="wrapper" data-barba="wrapper">
+      <!-- introductory header -->
+      <div class="header">
+        hi, this is ramy. please pick a song.
+      </div>
+      <!-- "song" section which is really just the navigation to different sections of the website -->
+      <div class="song" data-barba="container" data-barba-namespace="home">
+        <!-- song back button -->
+        <div class="song_back">
+          <div class="back_button">
+            <a id="back_button" href="index.html">
+              <img src="assets/play_button_min.png">
+            </a>
+          </div>
+          <div class="back_text">
+            <a id="back_text" href="index.html">
+              Return
+            </a>
+          </div>
+        </div>
+        <!-- song title section -->
+        <div class="song_title">
+          <h3>who is ramy zhang?</h3>
+        </div>
+        <!-- song cover art -->
+        <div class="song_cover">
+          <img src="assets/playlist_cover.png">
+        </div>
+        <!-- song length art -->
+        <div class="song_length">
+          <svg id="song" viewBox="74.836 213.928 300.0 21.012" xmlns="http://www.w3.org/2000/svg">
+            <rect x="74.836" y="220.66" width="300.0" height="5.5" style="stroke: rgb(0, 0, 0);"/>
+            <ellipse style="stroke: rgb(0, 0, 0);" cx="173.365" cy="224.434" rx="10" ry="10"/>
+          </svg>
+        </div>
+        <!-- music player-like buttons go here -->
+        <div class="player_buttons"><a id="go_back" href="index.html"><img src="assets/play_button_min.png"></a></div>
+        <div class="player_buttons"><a id="pause_play" href="index.html"><img src="assets/play_button.png"></a></div>
+        <div class="player_buttons"><a id="go_forward" href="index.html"><img src="assets/play_button_min.png"></a></div>
+      </div>
+      <!-- sidebar with core profile information -->
+      <div class="aboutme" data-barba="container" data-barba-namespace="home">
+        <h3>a bit about me</h3>
+        <p>hello stranger from the interwebz, this is your friendly local gremlin speaking.</p>
+      </div>
+    </div>
+  <script src="/js/main.js"></script>
+  <script src="/node_modules/animejs/lib/anime.min.js"></script>
+  <script type="module" src="/js/pageanimations.js"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+body {
+  display:grid;
+  justify-content:center;
+  font-family: 'Questrial', sans-serif;
+}
+
+p {
+  font-size: 15px;
+}
+
+.wrapper {
+  display:grid;
+  height:auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(17, 1fr);
+}
+
+@media (min-width: 700px) {
+  .wrapper {
+    width: 600px;
+    height: ;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(5, 150px);
+  }
+}
+
+.header {
+  grid-row: 1;
+}
+
+.portfolio {
+  grid-row: 2 / -1;
+}

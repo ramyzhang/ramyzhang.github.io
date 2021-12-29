@@ -1,0 +1,161 @@
+body {
+  display:grid;
+  justify-content:center;
+  font-family: 'Questrial', sans-serif;
+}
+
+p {
+  font-size: 15px;
+}
+
+.wrapper {
+  display:grid;
+  padding-top:5vh;
+  width:320px;
+  height:auto;
+  grid-template-areas:
+      "c c c c"
+      "b b b b"
+      "b b b b"
+      "b b b b"
+      "a a a a"
+      "a a a a"
+      "a a a a"
+      "a a a a";
+  grid-gap:1em;
+}
+
+@media (min-width: 700px) {
+  .wrapper {
+    width: 700px;
+    height:auto;
+    grid-template-columns: 320px 380px;
+    grid-template-areas:
+        "c c"
+        "a b";
+  }
+}
+
+.header {
+  grid-area: c;
+}
+
+.aboutme {
+  grid-area: b;
+}
+
+.song {
+  grid-area: a;
+  display:grid;
+  height: 420px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(11, 9%);
+  grid-column-gap: 1em;
+  border: 2px grey solid;
+  border-radius: 25px;
+  border-style: dashed;
+}
+
+.song_back {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  max-height: 100%;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: subgrid;
+  grid-gap: 3px;
+  align-items: center;
+}
+
+.song_back .back_button {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.back_button > a {
+  grid-column: 1;
+  display: inline-block;
+}
+
+.back_button > a > img {
+  object-fit: cover;
+  width: 90%;
+}
+
+.back_text {
+  grid-row: 1;
+  grid-column: 2 / 4;
+  padding-bottom: 2px;
+}
+
+.back_text > a {
+  text-decoration: none;
+}
+
+.back_text > a:visited {
+  color: black;
+}
+
+.song .song_title {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  align-self: end;
+  justify-self: center;
+}
+
+.song .song_cover {
+  grid-row: 4 / 8;
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.song_cover > img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+  border:1px black solid;
+}
+
+.song .song_length {
+  grid-row: 9;
+  grid-column: 1 / -1;
+  width: 90%;
+  place-self: center;
+}
+
+.song .player_buttons {
+  grid-row: 11;
+  max-height: 100%;
+  text-align: center;
+}
+
+.song .player_buttons > a {
+  display: inline-grid;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.song .player_buttons > a#pause_play {
+  justify-items: center;
+}
+
+.song .player_buttons > a#go_back {
+  justify-items: end;
+}
+
+.song .player_buttons > a#go_forward {
+  justify-items: start;
+}
+
+.song .player_buttons > a > img {
+  object-fit: cover;
+  width: 40%;
+  max-height: 80%;
+}
+
+.wrapper > div {
+  background: orange;
+  padding: 2em;
+}
