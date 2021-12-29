@@ -5,20 +5,82 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/07ee0b876b.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- the main contents of the website should all be contained within this wrapper -->
     <div class="wrapper" data-barba="wrapper">
       <!-- introductory header -->
       <div class="header">
-        hi, this is ramy. please pick a song.
+        <a id="header_link" href="index.html">
+          <h3>hi, this is ramy. please pick a song.</h3>
+        </a>
+      </div>
+      <!-- music player -->
+      <div class="music_player">
+        <div class="pause_play" onclick="pausePlay(playerButton)">
+          <i class="far fa-play-circle fa-2x" id="player_button"></i>
+        </div>
+        <div class="player">
+          <svg id="song" viewBox="74.836 213.928 300.0 21.012" xmlns="http://www.w3.org/2000/svg">
+            <rect x="74.836" y="222" width="300.0" height="3.0" style="stroke: rgb(0, 0, 0);"/>
+            <ellipse style="stroke: rgb(0, 0, 0);" cx="173.365" cy="224" rx="7" ry="7"/>
+          </svg>
+        </div>
       </div>
       <!-- "song" section which is really just the navigation to different sections of the website -->
       <div class="portfolio" data-barba="container" data-barba-namespace="home">
-        suhhhhhh dudes
+        <div class="project_1"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+        <div class="project_2"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+        <div class="project_3"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+        <div class="project_4"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+        <div class="project_1_name">
+          suuuuh dude
+        </div>
+        <div class="project_2_name">
+          suuuuh dude
+        </div>
+        <div class="project_3_name">
+          suuuuh dude
+        </div>
+        <div class="project_4_name">
+          suuuuh dude
+        </div>
+        <div class="project_5"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+        <div class="project_6"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+        <div class="project_7"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+        <div class="project_8"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+        <div class="project_5_name">
+          suuuuh dude
+        </div>
+        <div class="project_6_name">
+          suuuuh dude
+        </div>
+        <div class="project_7_name">
+          suuuuh dude
+        </div>
+        <div class="project_8_name">
+          suuuuh dude
+        </div>
+        <div class="project_9"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+        <div class="project_10"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+        <div class="project_11"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+        <div class="project_12"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+        <div class="project_9_name">
+          suuuuh dude
+        </div>
+        <div class="project_10_name">
+          suuuuh dude
+        </div>
+        <div class="project_11_name">
+          suuuuh dude
+        </div>
+        <div class="project_12_name">
+          suuuuh dude
+        </div>
       </div>
     </div>
-  <script src="/js/main.js"></script>
+  <script src="/js/projects.js"></script>
   <script src="/node_modules/animejs/lib/anime.min.js"></script>
   <script type="module" src="/js/pageanimations.js"></script>
   </body>
