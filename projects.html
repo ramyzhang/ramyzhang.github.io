@@ -10,75 +10,125 @@
   <body>
     <!-- the main contents of the website should all be contained within this wrapper -->
     <div class="wrapper" data-barba="wrapper">
-      <!-- introductory header -->
-      <div class="header">
-        <a id="header_link" href="index.html">
-          <h3>hi, this is ramy. please pick a song.</h3>
-        </a>
-      </div>
-      <!-- music player -->
-      <div class="music_player">
-        <div class="pause_play" onclick="pausePlay(playerButton)">
-          <i class="far fa-play-circle fa-2x" id="player_button"></i>
+      <section class="highlights_portfolio">
+        <div class="highlights_content">
+          <!-- introductory header -->
+          <div class="header">
+            hi, this is ramy. please pick a song.
+          </div>
+          <!-- "song" section which is really just the navigation to different sections of the website -->
+          <div class="song" data-barba="container" data-barba-namespace="home">
+            <!-- song back button -->
+            <div class="song_back">
+              <div class="back_button">
+                <a id="back_button" href="index.html">
+                  <img src="assets/play_button_min.png">
+                </a>
+              </div>
+              <div class="back_text">
+                <a id="back_text" href="index.html">
+                  Return
+                </a>
+              </div>
+            </div>
+            <!-- song title section -->
+            <div class="song_title">
+              <h3>who is ramy zhang?</h3>
+            </div>
+            <!-- song cover art -->
+            <div class="song_cover">
+              <img src="assets/playlist_cover.png">
+            </div>
+            <!-- song length art -->
+            <div class="song_length">
+              <svg id="song" viewBox="74.836 213.928 300.0 21.012" xmlns="http://www.w3.org/2000/svg">
+                <rect x="74.836" y="220.66" width="300.0" height="5.5" style="stroke: rgb(0, 0, 0);"/>
+                <ellipse style="stroke: rgb(0, 0, 0);" cx="173.365" cy="224.434" rx="10" ry="10"/>
+              </svg>
+            </div>
+            <!-- music player-like buttons go here -->
+            <div class="player_buttons"><a id="go_back" href="index.html"><img src="assets/play_button_min.png"></a></div>
+            <div class="player_buttons"><a id="pause_play" href="index.html"><img src="assets/play_button.png"></a></div>
+            <div class="player_buttons"><a id="go_forward" href="index.html"><img src="assets/play_button_min.png"></a></div>
+          </div>
+          <!-- sidebar with core profile information -->
+          <div class="aboutme" data-barba="container" data-barba-namespace="home">
+            <h3>a bit about me</h3>
+            <p>hello stranger from the interwebz, this is your friendly local gremlin speaking.</p>
+          </div>
         </div>
-        <div class="player">
-          <svg id="song" viewBox="74.836 213.928 300.0 21.012" xmlns="http://www.w3.org/2000/svg">
-            <rect x="74.836" y="222" width="300.0" height="3.0" style="stroke: rgb(0, 0, 0);"/>
-            <ellipse style="stroke: rgb(0, 0, 0);" cx="173.365" cy="224" rx="7" ry="7"/>
-          </svg>
+      </section>
+      <section class="full_portfolio" id="portfolio">
+        <!-- introductory header -->
+        <div class="portfolio_header">
+          <a id="header_link" href="index.html">
+            <h3>ramy's music library</h3>
+          </a>
         </div>
-      </div>
-      <!-- "song" section which is really just the navigation to different sections of the website -->
-      <div class="portfolio" data-barba="container" data-barba-namespace="home">
-        <div class="project_1"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
-        <div class="project_2"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
-        <div class="project_3"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
-        <div class="project_4"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
-        <div class="project_1_name">
-          suuuuh dude
+        <!-- music player -->
+        <div class="music_player">
+          <div class="pause_play" onclick="pausePlay(playerButton)">
+            <i class="far fa-play-circle fa-2x" id="player_button"></i>
+          </div>
+          <div class="player">
+            <svg id="song" viewBox="74.836 213.928 300.0 21.012" xmlns="http://www.w3.org/2000/svg">
+              <rect x="74.836" y="222" width="300.0" height="3.0" style="stroke: rgb(0, 0, 0);"/>
+              <ellipse style="stroke: rgb(0, 0, 0);" cx="173.365" cy="224" rx="7" ry="7"/>
+            </svg>
+          </div>
         </div>
-        <div class="project_2_name">
-          suuuuh dude
+        <!-- "song" section which is really just the navigation to different sections of the website -->
+        <div class="portfolio" data-barba="container" data-barba-namespace="home">
+          <div class="project_1"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+          <div class="project_2"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+          <div class="project_3"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+          <div class="project_4"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+          <div class="project_1_name">
+            suuuuh dude
+          </div>
+          <div class="project_2_name">
+            suuuuh dude
+          </div>
+          <div class="project_3_name">
+            suuuuh dude
+          </div>
+          <div class="project_4_name">
+            suuuuh dude
+          </div>
+          <div class="project_5"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+          <div class="project_6"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+          <div class="project_7"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+          <div class="project_8"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+          <div class="project_5_name">
+            suuuuh dude
+          </div>
+          <div class="project_6_name">
+            suuuuh dude
+          </div>
+          <div class="project_7_name">
+            suuuuh dude
+          </div>
+          <div class="project_8_name">
+            suuuuh dude
+          </div>
+          <div class="project_9"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+          <div class="project_10"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+          <div class="project_11"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+          <div class="project_12"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
+          <div class="project_9_name">
+            suuuuh dude
+          </div>
+          <div class="project_10_name">
+            suuuuh dude
+          </div>
+          <div class="project_11_name">
+            suuuuh dude
+          </div>
+          <div class="project_12_name">
+            suuuuh dude
+          </div>
         </div>
-        <div class="project_3_name">
-          suuuuh dude
-        </div>
-        <div class="project_4_name">
-          suuuuh dude
-        </div>
-        <div class="project_5"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
-        <div class="project_6"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
-        <div class="project_7"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
-        <div class="project_8"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
-        <div class="project_5_name">
-          suuuuh dude
-        </div>
-        <div class="project_6_name">
-          suuuuh dude
-        </div>
-        <div class="project_7_name">
-          suuuuh dude
-        </div>
-        <div class="project_8_name">
-          suuuuh dude
-        </div>
-        <div class="project_9"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
-        <div class="project_10"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
-        <div class="project_11"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
-        <div class="project_12"><img class="portfolio_img" src="assets/playlist_cover.png"></div>
-        <div class="project_9_name">
-          suuuuh dude
-        </div>
-        <div class="project_10_name">
-          suuuuh dude
-        </div>
-        <div class="project_11_name">
-          suuuuh dude
-        </div>
-        <div class="project_12_name">
-          suuuuh dude
-        </div>
-      </div>
+      </section>
     </div>
   <script src="/js/projects.js"></script>
   <script src="/node_modules/animejs/lib/anime.min.js"></script>

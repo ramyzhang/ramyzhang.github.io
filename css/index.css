@@ -1,7 +1,12 @@
 body {
   display:grid;
-  justify-content:center;
+  place-content:center;
   font-family: 'Questrial', sans-serif;
+  height: 100%;
+}
+
+html {
+  height: 100%;
 }
 
 p {
@@ -10,7 +15,6 @@ p {
 
 .wrapper {
   display:grid;
-  padding-top:5vh;
   width:320px;
   height:auto;
   grid-template-areas:
