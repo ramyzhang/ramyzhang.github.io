@@ -190,20 +190,20 @@ p {
 
 .playlist .player_buttons > a#pause_play {
   justify-items: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .playlist .player_buttons > a#go_back {
   justify-items: end;
+  text-decoration: none;
+  color: inherit;
 }
 
 .playlist .player_buttons > a#go_forward {
   justify-items: start;
-}
-
-.playlist .player_buttons > a > img {
-  object-fit: cover;
-  width: 40%;
-  max-height: 80%;
+  text-decoration: none;
+  color: inherit;
 }
 
 .wrapper > div {

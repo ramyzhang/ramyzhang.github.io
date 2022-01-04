@@ -166,7 +166,7 @@ p {
   max-height: 100%;
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   grid-template-rows: subgrid;
   grid-gap: 3px;
   align-items: center;
@@ -180,11 +180,8 @@ p {
 .back_button > a {
   grid-column: 1;
   display: inline-block;
-}
-
-.back_button > a > img {
-  object-fit: cover;
-  width: 90%;
+  text-decoration: none;
+  color: inherit;
 }
 
 .back_text {
@@ -243,20 +240,20 @@ p {
 
 .song .player_buttons > a#pause_play {
   justify-items: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .song .player_buttons > a#go_back {
   justify-items: end;
+  text-decoration: none;
+  color: inherit;
 }
 
 .song .player_buttons > a#go_forward {
   justify-items: start;
-}
-
-.song .player_buttons > a > img {
-  object-fit: cover;
-  width: 40%;
-  max-height: 80%;
+  text-decoration: none;
+  color: inherit;
 }
 
 .portfolio {
