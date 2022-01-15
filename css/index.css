@@ -2,6 +2,7 @@ body {
   display:grid;
   place-content:center;
   font-family: 'Questrial', sans-serif;
+  color: #59302d;
   height: 100%;
 }
 
@@ -42,20 +43,23 @@ p {
 
 .header {
   grid-area: c;
+  background-color: #ddb6b3;
 }
 
 .sidebar {
   grid-area: a;
+  background-color: #f2d6c7;
 }
 
 .playlist {
   grid-area: b;
+  background-color: #e0ab98;
   display:grid;
   height: 420px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(11, 9%);
   grid-column-gap: 1em;
-  border: 2px grey solid;
+  border: 2px #59302d solid;
   border-radius: 25px;
   border-style: dashed;
 }
@@ -68,7 +72,7 @@ p {
   object-fit: cover;
   width: 100%;
   max-height: 100%;
-  border:1px black solid;
+  border:1px #59302d solid;
 }
 
 .playlist .playlist_name {
@@ -93,7 +97,7 @@ p {
 
 .playlist .playlist_actions .heart_icon {
   fill: transparent;
-  stroke: black;
+  stroke: #59302d;
   stroke-width: 1.7;
   cursor: pointer;
   transition-property: fill;
@@ -102,6 +106,7 @@ p {
 
 .playlist .playlist_actions .share_icon {
   cursor: pointer;
+  fill: #59302d;
   transform-origin: center;
 }
 
@@ -136,7 +141,7 @@ p {
   padding: 0px 10px;
   margin-top: 5px;
   grid-column-gap: 10px;
-  border: 1px black solid;
+  border: 1px #59302d solid;
   border-radius: 10px;
   align-self: center;
   cursor: pointer;
@@ -159,13 +164,12 @@ p {
   grid-row: 1 / -1;
   max-height:100%;
   align-self: center;
-  padding-top: 3px;
   object-fit: cover;
   width: 100%;
 }
 
 .playlist .playlist_songs .song > p > a {
-  color: black;
+  color: #59302d;
   text-decoration: none;
 }
 
@@ -190,23 +194,22 @@ p {
 
 .playlist .player_buttons > a#pause_play {
   justify-items: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .playlist .player_buttons > a#go_back {
   justify-items: end;
+  text-decoration: none;
+  color: inherit;
 }
 
 .playlist .player_buttons > a#go_forward {
   justify-items: start;
-}
-
-.playlist .player_buttons > a > img {
-  object-fit: cover;
-  width: 40%;
-  max-height: 80%;
+  text-decoration: none;
+  color: inherit;
 }
 
 .wrapper > div {
-  background: orange;
   padding: 2em;
 }

@@ -1,6 +1,7 @@
 body {
   font-family: 'Questrial', sans-serif;
   height: 100%;
+  color: #59302d;
 }
 
 @media (min-width: 700px) {
@@ -62,10 +63,12 @@ p {
 
 .header {
   grid-area: c;
+  background-color: #ddb6b3;
 }
 
 .aboutme {
   grid-area: b;
+  background-color: #fbe4df;
 }
 
 .aboutme > .highlights_header {
@@ -82,7 +85,7 @@ p {
   align-self: center;
   justify-self: end;
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 .aboutme > .highlights_album {
@@ -123,7 +126,7 @@ p {
   background-color: transparent;
   width: auto;
   height: auto;
-  color: black;
+  color: #59302d;
 }
 
 .card_back {
@@ -145,17 +148,18 @@ p {
 
 .project_name > a {
   text-decoration: none;
-  color: inherit;
+  color: #59302d;
 }
 
 .song {
   grid-area: a;
+  background-color: #e0ab98;
   display:grid;
   height: 420px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(11, 9%);
   grid-column-gap: 1em;
-  border: 2px grey solid;
+  border: 2px #59302d solid;
   border-radius: 25px;
   border-style: dashed;
 }
@@ -166,7 +170,7 @@ p {
   max-height: 100%;
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   grid-template-rows: subgrid;
   grid-gap: 3px;
   align-items: center;
@@ -180,11 +184,8 @@ p {
 .back_button > a {
   grid-column: 1;
   display: inline-block;
-}
-
-.back_button > a > img {
-  object-fit: cover;
-  width: 90%;
+  text-decoration: none;
+  color: inherit;
 }
 
 .back_text {
@@ -198,7 +199,7 @@ p {
 }
 
 .back_text > a:visited {
-  color: black;
+  color: #59302d;
 }
 
 .song .song_title {
@@ -218,14 +219,31 @@ p {
   object-fit: cover;
   width: 100%;
   max-height: 100%;
-  border:1px black solid;
+  border:1px #59302d solid;
 }
 
 .song .song_length {
-  grid-row: 9;
+  grid-row: 10;
   grid-column: 1 / -1;
   width: 90%;
   place-self: center;
+}
+
+@keyframes playsong {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(285px);
+  }
+}
+
+.song_length > svg {
+  fill: #59302d;
+}
+
+.song_length > svg > ellipse {
+  animation: playsong 50s linear infinite;
 }
 
 .song .player_buttons {
@@ -243,29 +261,63 @@ p {
 
 .song .player_buttons > a#pause_play {
   justify-items: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .song .player_buttons > a#go_back {
   justify-items: end;
+  text-decoration: none;
+  color: inherit;
 }
 
 .song .player_buttons > a#go_forward {
   justify-items: start;
+  text-decoration: none;
+  color: inherit;
 }
 
-.song .player_buttons > a > img {
-  object-fit: cover;
-  width: 40%;
-  max-height: 80%;
+@media (min-width = 700px) {
+  hr {
+    display: none;
+  }
+}
+
+.portfolio_nav {
+  display: flex;
+  width: 320px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 1em;
+  padding-bottom: 1em;
+}
+
+@media (min-width: 700px) {
+  .portfolio_nav {
+    display: flex;
+    width: auto;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1em;
+    padding-bottom: 0em;
+  }
+}
+
+.portfolio_tab {
+  cursor: pointer;
 }
 
 .portfolio {
   display:grid;
+  padding: 1.5em;
+  background-color: #e8dff5;
   width: 320px;
   height:auto;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2em;
+  margin-bottom: 1em;
 }
 
 @media (min-width: 700px) {
@@ -274,6 +326,7 @@ p {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 3em;
+    margin-bottom: 0em;
   }
 }
 
@@ -300,17 +353,20 @@ p {
 
 .portfolio_header > a#header_link {
   text-decoration: none;
-}
-
-.portfolio_header > a#header_link:visited {
-  color: black;
+  color: inherit;
 }
 
 .music_player {
-  display: grid;
-  width: 320px;
-  grid-template-columns: repeat(2, auto);
-  padding-bottom: 2em;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding-bottom: 1em;
+}
+
+.music_player > i#player_button {
+  cursor: pointer;
 }
 
 @media (min-width: 700px) {
@@ -342,6 +398,5 @@ p {
 }
 
 .highlights_content > div {
-  background: orange;
   padding: 2em;
 }

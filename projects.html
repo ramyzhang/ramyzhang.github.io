@@ -10,7 +10,7 @@
   <body>
     <!-- the main contents of the website should all be contained within this wrapper -->
     <div class="wrapper" data-barba="wrapper">
-      <section class="highlights_portfolio">
+      <section class="highlights_portfolio" data-barba="container" data-barba-namespace="highlightsPortfolio">
         <div class="highlights_content">
           <!-- introductory header -->
           <div class="header">
@@ -21,12 +21,12 @@
             <!-- song back button -->
             <div class="song_back">
               <div class="back_button">
-                <a id="back_button" href="index.html">
-                  <img src="assets/play_button_min.png">
+                <a href="index.html">
+                  <i class="fas fa-arrow-left fa-lg"></i>
                 </a>
               </div>
               <div class="back_text">
-                <a id="back_text" href="index.html">
+                <a href="index.html">
                   Return
                 </a>
               </div>
@@ -42,14 +42,14 @@
             <!-- song length art -->
             <div class="song_length">
               <svg id="song" viewBox="74.836 213.928 300.0 21.012" xmlns="http://www.w3.org/2000/svg">
-                <rect x="74.836" y="220.66" width="300.0" height="5.5" style="stroke: rgb(0, 0, 0);"/>
-                <ellipse style="stroke: rgb(0, 0, 0);" cx="173.365" cy="224.434" rx="10" ry="10"/>
+                <rect x="74.836" y="220.66" width="300.0" height="3.0" style="stroke: rgb(0, 0, 0);"/>
+                <ellipse style="stroke: rgb(0, 0, 0);" cx="173.365" cy="223" rx="7" ry="7"/>
               </svg>
             </div>
             <!-- music player-like buttons go here -->
-            <div class="player_buttons"><a id="go_back" href="index.html"><img src="assets/play_button_min.png"></a></div>
-            <div class="player_buttons"><a id="pause_play" href="index.html"><img src="assets/play_button.png"></a></div>
-            <div class="player_buttons"><a id="go_forward" href="index.html"><img src="assets/play_button_min.png"></a></div>
+            <div class="player_buttons"><a id="go_back" href="aboutme.html"><i class="fas fa-forward fa-flip-horizontal"></i></a></div>
+            <div class="player_buttons"><a id="pause_play" href="index.html"><i class="far fa-play-circle fa-2x"></i></a></div>
+            <div class="player_buttons"><a id="go_forward" href="links.html"><i class="fas fa-forward"></i></a></div>
           </div>
           <!-- sidebar with core profile information -->
           <div class="aboutme" data-barba="container" data-barba-namespace="home">
@@ -119,7 +119,8 @@
           </div>
         </div>
       </section>
-      <section class="full_portfolio" id="portfolio">
+      <hr>
+      <section class="full_portfolio" id="portfolio" data-barba="container" data-barba-namespace="fullPortfolio">
         <!-- introductory header -->
         <div class="portfolio_header">
           <a id="header_link" href="index.html">
@@ -128,18 +129,486 @@
         </div>
         <!-- music player -->
         <div class="music_player">
-          <div class="pause_play" onclick="pausePlay(playerButton)">
-            <i class="far fa-play-circle fa-2x" id="player_button"></i>
-          </div>
-          <div class="player">
-            <svg id="song" viewBox="74.836 213.928 300.0 21.012" xmlns="http://www.w3.org/2000/svg">
-              <rect x="74.836" y="222" width="300.0" height="3.0" style="stroke: rgb(0, 0, 0);"/>
-              <ellipse style="stroke: rgb(0, 0, 0);" cx="173.365" cy="224" rx="7" ry="7"/>
-            </svg>
-          </div>
+          <i class="fas fa-forward fa-flip-horizontal"></i>
+          <i class="far fa-play-circle fa-2x" id="player_button" onclick="pausePlay(playerButton)"></i>
+          <i class="fas fa-forward"></i>
         </div>
         <!-- "song" section which is really just the navigation to different sections of the website -->
-        <div class="portfolio" data-barba="container" data-barba-namespace="home">
+        <div class="portfolio_nav">
+          <h3>my projects</h3>
+          <div class="portfolio_tab dev" onclick="openTab('dev')" style="background-color:#e8dff5">
+            dev
+          </div>
+          <div class="portfolio_tab music" onclick="openTab('music')">
+            music
+          </div>
+          <div class="portfolio_tab consulting" onclick="openTab('consulting')">
+            consulting
+          </div>
+          <div class="portfolio_tab writing" onclick="openTab('writing')">
+            writing
+          </div>
+          <div class="portfolio_tab talks" onclick="openTab('talks')">
+            talks
+          </div>
+        </div>
+        <div id="dev" class="portfolio">
+          <div class="project project_1">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_1_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_2">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_2_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_3">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_3_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_4">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_4_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_5">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_5_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_6">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_6_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_7">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_7_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_8">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_8_name">
+              suuuuh dude
+            </div>
+          </div>
+        </div>
+        <div id="music" class="portfolio" style="display:none">
+          <div class="project project_1">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_1_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_2">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_2_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_3">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_3_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_4">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_4_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_5">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_5_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_6">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_6_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_7">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_7_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_8">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_8_name">
+              suuuuh dude
+            </div>
+          </div>
+        </div>
+        <div id="consulting" class="portfolio" style="display:none">
+          <div class="project project_1">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_1_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_2">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_2_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_3">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_3_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_4">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_4_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_5">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_5_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_6">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_6_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_7">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_7_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_8">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_8_name">
+              suuuuh dude
+            </div>
+          </div>
+        </div>
+        <div id="writing" class="portfolio" style="display:none">
+          <div class="project project_1">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_1_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_2">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_2_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_3">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_3_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_4">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_4_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_5">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_5_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_6">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_6_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_7">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_7_name">
+              suuuuh dude
+            </div>
+          </div>
+          <div class="project project_8">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="assets/playlist_cover.png">
+              </div>
+              <div class="card_back">
+                <p>something a lil cheeky</p>
+                <p>wheeeeee</p>
+              </div>
+            </div>
+            <div class="project_8_name">
+              suuuuh dude
+            </div>
+          </div>
+        </div>
+        <div id="talks" class="portfolio" style="display:none">
           <div class="project project_1">
             <div class="card">
               <div class="card_front">

@@ -2,6 +2,7 @@ body {
   display:grid;
   place-content:center;
   font-family: 'Questrial', sans-serif;
+  /* height: 100vh; */
 }
 
 @media (min-width: 700px) {
@@ -46,23 +47,20 @@ p {
 
 .header {
   grid-area: c;
-  background-color: #ddb6b3;
 }
 
-.aboutme {
+.links {
   grid-area: b;
-  background-color: #fbe4df;
 }
 
 .song {
   grid-area: a;
-  background-color: #e0ab98;
   display:grid;
   height: 420px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(11, 9%);
   grid-column-gap: 1em;
-  border: 2px #59302d solid;
+  border: 2px grey solid;
   border-radius: 25px;
   border-style: dashed;
 }
