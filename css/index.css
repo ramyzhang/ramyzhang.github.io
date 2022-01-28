@@ -3,6 +3,7 @@ body {
   place-content:center;
   font-family: 'Questrial', sans-serif;
   color: #59302d;
+  /* TODO: change palette to earthy tones to match images */
   height: 100%;
 }
 
@@ -168,6 +169,7 @@ p {
 }
 
 .playlist .playlist_songs .song > img {
+  /* TODO: make playlist song images rounded  */
   grid-column: 1;
   grid-row: 1 / -1;
   max-height:100%;
