@@ -5,6 +5,7 @@ body {
   color: #59302d;
   /* TODO: change palette to earthy tones to match images */
   height: 100%;
+  background-image: linear-gradient(to bottom right, #ebcecc, #cf8d5f);
 }
 
 html {
@@ -67,6 +68,7 @@ p {
 .sidebar > img {
   width: 100%;
   border: 1px #59302d solid;
+  border-radius: 5px;
 }
 
 .header > h3 {
@@ -82,6 +84,7 @@ p {
   object-fit: cover;
   max-height: 100%;
   border:1px #59302d solid;
+  border-radius: 5px;
 }
 
 .playlist .playlist_name {
@@ -169,12 +172,13 @@ p {
 }
 
 .playlist .playlist_songs .song > img {
-  /* TODO: make playlist song images rounded  */
   grid-column: 1;
   grid-row: 1 / -1;
   max-height:100%;
   align-self: center;
   object-fit: cover;
+  border: 1px #59302d solid;
+  border-radius: 3px;
   width: 100%;
 }
 
