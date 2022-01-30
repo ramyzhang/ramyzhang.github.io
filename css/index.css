@@ -46,11 +46,15 @@ p {
 .header {
   grid-area: c;
   background-color: #ddb6b3;
+  border: 1px #59302d solid;
+  border-radius: 25px;
 }
 
 .sidebar {
   grid-area: a;
   background-color: #f2d6c7;
+  border: 1px #59302d solid;
+  border-radius: 25px;
 }
 
 .playlist {
