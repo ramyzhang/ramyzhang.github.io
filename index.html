@@ -2,13 +2,12 @@
 <html>
   <head>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/07ee0b876b.js" crossorigin="anonymous"></script>
-    <!-- TODO: combine all shared styles into one single stylesheet -->
   </head>
   <body>
+    <!-- TODO: use tiptoe photos instead!!! -->
     <!-- the main contents of the website should all be contained within this wrapper -->
     <div class="wrapper" data-barba="wrapper">
       <!-- introductory header -->
@@ -18,7 +17,8 @@
       <!-- sidebar with core profile information -->
       <div class="sidebar" data-barba="container" data-barba-namespace="sidebar">
         <img src="./assets/windowshot.jpg">
-        <p>singer-producer.<br />software developer.<br />compsci x cogsci @ university of toronto.</p>
+        <p><span style="font-weight:800">🌼🌱 ramy zhang</span></p>
+        <p><em>singer-producer.</em><br /><em>software developer.</em><br /><em>compsci x cogsci @ university of toronto.</em></p>
         <p>hobbies include playing wholesome games, amateur sound design, and obsessively curating spotify playlists no one but me will listen to</p>
       </div>
       <!-- "playlist" section which is really just the navigation to different sections of the website -->
@@ -40,6 +40,7 @@
         <div class="playlist_description"><p>a little playlist about...</p></div>
         <!-- links to different parts of website should be contained here -->
         <div class="playlist_songs">
+          <!-- TODO: make minimized versions of song thumbnails for faster loading -->
           <div class="song" id="0">
             <img src="./assets/floorshot.jpg">
             <p><a class="song_link" href="aboutme.html">about me</a></p>
@@ -50,7 +51,7 @@
             <p id="song_length">5:14</p></div>
           <div class="song" id="2">
             <img src="./assets/altheadshot.jpg">
-            <p><a class="song_link" href="https://drive.google.com/file/d/1uly4iHoX6DUHxOqIU7Q73P4mzb00-i1p/view?usp=sharing">my resume</a></p>
+            <p><a class="song_link" href="assets/resume.pdf">my resume</a></p>
             <p id="song_length">2:24</p></div>
           <div class="song" id="3">
             <img src="./assets/headshot.jpg">

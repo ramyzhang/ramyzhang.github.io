@@ -1,5 +1,6 @@
 const playerButton = document.getElementById('player_button');
 const tabColours = ["#e8dff5", "#fce1e4", "#fcf4dd", "#ddedea", "#daeaf6"]
+const portfolioPage = document.getElementById('portfolio');
 
 function pausePlay(playerButton) {
   if (playerButton.className == "far fa-play-circle fa-2x") {
@@ -25,4 +26,8 @@ function openTab(tabName) {
   displayedPortfolio.style.display = "grid";
   displayedPortfolio.style.backgroundColor = tabColours[colourIndex];
   document.querySelector(`.${tabName}`).style.backgroundColor = tabColours[colourIndex];
+}
+
+function scrollToPortfolio(pageId) {
+  portfolioPage.scrollIntoView({behavior: "smooth"});
 }

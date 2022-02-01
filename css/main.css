@@ -3,27 +3,47 @@ body {
   /* TODO: add word highlighting */
   display:grid;
   place-content:center;
-  font-family: 'Questrial', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #59302d;
   /* TODO: change palette to earthy tones to match images */
   height: 100%;
-  background-image: linear-gradient(to bottom right, #ebcecc, #cf8d5f);
 }
 
 @media (min-width: 700px) {
   body {
     height: 100vh;
   }
-}
 
-@media (min-width: 700px) {
   html {
     height: 100vh;
   }
 }
 
+html {
+  background-image: linear-gradient(to bottom right, #ebcecc, #cf8d5f);
+  background-attachment: fixed;
+}
+
 p {
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+span .bold {
+  font-weight: 800;
+}
+
+span .light {
+  font-weight: 200;
+}
+
+.hi_salmon {
+  background-color: #f2a18d;
 }
 
 .wrapper {
@@ -42,7 +62,7 @@ p {
   .wrapper {
     width: 700px;
     height: auto;
-    grid-template-columns: 320px 380px;
+    grid-template-columns: 320px 360px;
     grid-template-areas:
         "c c"
         "a b";
@@ -58,7 +78,6 @@ p {
 }
 
 .song {
-  /* TODO: add song title to deal with the emptiness in this area */
   grid-area: a;
   background-color: #e0ab98;
   display:grid;
@@ -90,18 +109,12 @@ p {
 .back_button > a {
   grid-column: 1;
   display: inline-block;
-  text-decoration: none;
-  color: inherit;
 }
 
 .back_text {
   grid-row: 1;
   grid-column: 2 / 4;
   padding-bottom: 2px;
-}
-
-.back_text > a {
-  text-decoration: none;
 }
 
 .back_text > a:visited {
@@ -115,10 +128,15 @@ p {
   justify-self: center;
 }
 
+.song .song_title > h3 {
+  font-weight: 400;
+}
+
 .song .song_cover {
   grid-row: 4 / 8;
   grid-column: 1 / -1;
   justify-self: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .song_cover > img {
@@ -129,10 +147,16 @@ p {
   border-radius: 3px;
 }
 
+.song .song_credits {
+  grid-row: 9 / 10;
+  grid-column: 1 / -1;
+  align-self: end;
+}
+
 .song .song_length {
   grid-row: 10;
   grid-column: 1 / -1;
-  width: 90%;
+  width: 100%;
   place-self: center;
 }
 
@@ -168,22 +192,39 @@ p {
 
 .song .player_buttons > a#pause_play {
   justify-items: center;
-  text-decoration: none;
-  color: inherit;
 }
 
 .song .player_buttons > a#go_back {
   justify-items: end;
-  text-decoration: none;
-  color: inherit;
 }
 
 .song .player_buttons > a#go_forward {
   justify-items: start;
-  text-decoration: none;
-  color: inherit;
 }
 
 .wrapper > div {
   padding: 2em;
+}
+
+/* scrollbar customization here */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fbe4df;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ab6d60;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c75b44;
 }

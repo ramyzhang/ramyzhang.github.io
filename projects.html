@@ -3,9 +3,8 @@
   <head>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/projects.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/07ee0b876b.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -40,11 +39,15 @@
             <div class="song_cover">
               <img src="assets/bwheadshot.jpg">
             </div>
+            <!-- song description -->
+            <div class="song_credits">
+              my work & creations
+            </div>
             <!-- song length art -->
             <div class="song_length">
               <svg id="song" viewBox="74.836 213.928 300.0 21.012" xmlns="http://www.w3.org/2000/svg">
-                <rect x="74.836" y="220.66" width="300.0" height="3.0" style="stroke: rgb(0, 0, 0);"/>
-                <ellipse style="stroke: rgb(0, 0, 0);" cx="82.5" cy="223" rx="7" ry="7"/>
+                <rect x="74.836" y="220.66" width="300.0" height="3.0"/>
+                <ellipse cx="82.5" cy="223" rx="7" ry="7"/>
               </svg>
             </div>
             <!-- music player-like buttons go here -->
@@ -56,7 +59,7 @@
           <div class="aboutme" data-barba="container" data-barba-namespace="home">
             <div class="highlights_header">
               <h3>portfolio highlights</h3>
-              <a href="projects.html#portfolio"><i class="fas fa-arrow-right fa-lg"></i></a>
+              <i class="fas fa-arrow-right fa-lg" onclick="scrollToPortfolio(portfolioPage)"></i>
             </div>
             <div class="highlights_album">
               <div class="project project_1">
@@ -76,7 +79,7 @@
               <div class="project project_2">
                 <div class="card">
                   <div class="card_front">
-                    <img class="portfolio_img" src="assets/brawlr.png">
+                    <img class="portfolio_img" src="assets/projects/brawlr.png">
                   </div>
                   <div class="card_back">
                     <p>a tinder-like<br />app to find<br />sparring partners.<br />my role: backend, chat function</p>
@@ -104,7 +107,7 @@
               <div class="project project_4">
                 <div class="card">
                   <div class="card_front">
-                    <img class="portfolio_img" src="assets/lofimaker.png">
+                    <img class="portfolio_img" src="assets/projects/lofimaker.png">
                   </div>
                   <div class="card_back">
                     <p>point-and-click: decorate a room<br />to create unique<br />lofi beats</p>
@@ -112,7 +115,7 @@
                   </div>
                 </div>
                 <div class="project_name project_4_name">
-                  Lofi Maker (Unity2D Game Prototype)
+                  <a href="https://mimimosa.itch.io/lofi-maker">Lofi Maker (Unity2D)</a>
                 </div>
               </div>
             </div>
@@ -155,7 +158,7 @@
           <div class="project project_1">
             <div class="card">
               <div class="card_front">
-                <img class="portfolio_img" src="assets/brawlr.png">
+                <img class="portfolio_img" src="assets/projects/brawlr.png">
               </div>
               <div class="card_back">
                 <p>a tinder-like<br />app to find<br />sparring partners.<br />my role: backend, chat function</p>
@@ -163,163 +166,163 @@
               </div>
             </div>
             <div class="project_1_name">
-              <a href="https://drive.google.com/file/d/1VQh5JrBHfWmW23bBCaWFT_5osEqgsC9A/view?usp=sharing">Brawlr App</a>
+              <a href="https://drive.google.com/file/d/1VQh5JrBHfWmW23bBCaWFT_5osEqgsC9A/view?usp=sharing">Brawlr (Android Studio)</a>
             </div>
           </div>
           <div class="project project_2">
             <div class="card">
               <div class="card_front">
-                <img class="portfolio_img" src="assets/playlist_cover.png">
+                <img class="portfolio_img" src="assets/projects/lofimaker.png">
               </div>
               <div class="card_back">
-                <p>something a lil cheeky</p>
-                <p>wheeeeee</p>
+                <p>point-and-click: decorate a room<br />to create unique<br />lofi beats</p>
+                <a href="https://mimimosa.itch.io/lofi-maker">play here</a>
               </div>
             </div>
             <div class="project_2_name">
-              suuuuh dude
+              <a href="https://mimimosa.itch.io/lofi-maker">Lofi Maker (Unity Prototype)</a>
             </div>
           </div>
           <div class="project project_3">
             <div class="card">
               <div class="card_front">
-                <img class="portfolio_img" src="assets/playlist_cover.png">
+                <img class="portfolio_img" src="assets/projects/dmc.png">
               </div>
               <div class="card_back">
-                <p>something a lil cheeky</p>
-                <p>wheeeeee</p>
+                <p>vanilla html/css website built for<br />my band, the dmc</p>
+                <a href="https://deezedmancollective.com/">view here</a>
               </div>
             </div>
             <div class="project_3_name">
-              suuuuh dude
+              <a href="https://deezedmancollective.com/">DMC (HTML/CSS Website)</a>
             </div>
           </div>
           <div class="project project_4">
             <div class="card">
               <div class="card_front">
-                <img class="portfolio_img" src="assets/playlist_cover.png">
+                <img class="portfolio_img" src="assets/projects/vintage.png">
               </div>
               <div class="card_back">
-                <p>something a lil cheeky</p>
-                <p>wheeeeee</p>
+                <p>imaginary ecommerce site<br />built in react, with<br /> working payments</p>
+                <a href="https://vint-age.netlify.app/">view here</a>
               </div>
             </div>
             <div class="project_4_name">
-              suuuuh dude
+              <a href="https://vint-age.netlify.app/">Vint-Age (React App)</a>
             </div>
           </div>
           <div class="project project_5">
             <div class="card">
               <div class="card_front">
-                <img class="portfolio_img" src="assets/playlist_cover.png">
+                <img class="portfolio_img" src="assets/projects/elevate.png">
               </div>
               <div class="card_back">
-                <p>something a lil cheeky</p>
-                <p>wheeeeee</p>
+                <p>mentor search platform built for<br />IGM's 2019 hackathon. 1st<br />place winner!</p>
+                <a href="https://igmteam4.invisionapp.com/prototype/ELEVATE-ck1c806ye00eqmb01dwljy8qo?v=LPqykkmIQEl9tRIpvwSzBQ%3D%3D&linkshare=urlcopied">view here</a>
               </div>
             </div>
             <div class="project_5_name">
-              suuuuh dude
+              <a href="https://igmteam4.invisionapp.com/prototype/ELEVATE-ck1c806ye00eqmb01dwljy8qo?v=LPqykkmIQEl9tRIpvwSzBQ%3D%3D&linkshare=urlcopied">ELEVATE (UI & Product)</a>
             </div>
           </div>
           <div class="project project_6">
             <div class="card">
               <div class="card_front">
-                <img class="portfolio_img" src="assets/playlist_cover.png">
+                <img class="portfolio_img" src="assets/projects/secvote.png">
               </div>
               <div class="card_back">
-                <p>something a lil cheeky</p>
-                <p>wheeeeee</p>
+                <p>decentralized<br />voting app built on ethereum in Solidity and truffleJS.</p>
+                <a href="https://youtu.be/CxNrvnLsuh0">view demo</a>
               </div>
             </div>
             <div class="project_6_name">
-              suuuuh dude
+              <a href="https://youtu.be/CxNrvnLsuh0">SecVote (Ethereum Dapp)</a>
             </div>
           </div>
           <div class="project project_7">
             <div class="card">
               <div class="card_front">
-                <img class="portfolio_img" src="assets/playlist_cover.png">
+                <img class="portfolio_img" src="assets/projects/ethercasino.png">
               </div>
               <div class="card_back">
-                <p>something a lil cheeky</p>
-                <p>wheeeeee</p>
+                <p>decentralized<br />betting app built on ethereum in Solidity and truffleJS.</p>
+                <a href="https://www.youtube.com/watch?v=1ziKS91VYLQ">view demo</a>
               </div>
             </div>
             <div class="project_7_name">
-              suuuuh dude
+              <a href="https://www.youtube.com/watch?v=1ziKS91VYLQ">SecVote (Ethereum Dapp)</a>
             </div>
           </div>
           <div class="project project_8">
             <div class="card">
               <div class="card_front">
-                <img class="portfolio_img" src="assets/playlist_cover.png">
+                <img class="portfolio_img" src="assets/projects/flowerpower.png">
               </div>
               <div class="card_back">
-                <p>something a lil cheeky</p>
-                <p>wheeeeee</p>
+                <p>Dapp for betting<br />with erc721 rewards. built with ethers.io. 1st place of shyfthack!</p>
+                <a href="https://github.com/rikardsaqe/FLOWERPOWER-1">view repo</a>
               </div>
             </div>
             <div class="project_8_name">
-              suuuuh dude
+              <a href="https://github.com/rikardsaqe/FLOWERPOWER-1">FlowerPower (Ethereum Dapp)</a>
             </div>
           </div>
         </div>
         <div id="music" class="portfolio" style="display:none">
+          <div class="project project_4">
+            <div class="card">
+              <div class="card_front">
+                <img class="portfolio_img" src="https://f4.bcbits.com/img/a2954645045_16.jpg">
+              </div>
+              <div class="card_back">
+                <p>a summery dance pop single written<br />by me and <br />produced by k.lee</p>
+                <a href="https://ramyzhang.bandcamp.com/track/tiptoe-prod-k-lee">listen here</a>
+              </div>
+            </div>
+            <div class="project_4_name">
+              <a href="https://ramyzhang.bandcamp.com/track/tiptoe-prod-k-lee">Tiptoe (2021 Single)</a>
+            </div>
+          </div>
           <div class="project project_1">
             <div class="card">
               <div class="card_front">
-                <img class="portfolio_img" src="assets/playlist_cover.png">
+                <img class="portfolio_img" src="https://f4.bcbits.com/img/a1746673333_16.jpg">
               </div>
               <div class="card_back">
-                <p>something a lil cheeky</p>
-                <p>wheeeeee</p>
+                <p>an EP i wrote, produced, and recorded from my bedroom in 2020</p>
+                <a href="https://ramyzhang.bandcamp.com/album/growing-pains">listen here</a>
               </div>
             </div>
             <div class="project_1_name">
-              suuuuh dude
+                <a href="https://ramyzhang.bandcamp.com/album/growing-pains">Growing Pains (debut EP)</a>
             </div>
           </div>
           <div class="project project_2">
             <div class="card">
               <div class="card_front">
-                <img class="portfolio_img" src="assets/playlist_cover.png">
+                <img class="portfolio_img" src="https://f4.bcbits.com/img/a2326633825_16.jpg">
               </div>
               <div class="card_back">
-                <p>something a lil cheeky</p>
-                <p>wheeeeee</p>
+                <p>a cover of "tú" by maye that i rearranged. 100k listens on spotify!</p>
+                <a href="https://open.spotify.com/track/7uPYIJrrdyeAtZfLVKpNy2?si=d2db20ed12f241f1">listen here</a>
               </div>
             </div>
             <div class="project_2_name">
-              suuuuh dude
+              <a href="https://open.spotify.com/track/7uPYIJrrdyeAtZfLVKpNy2?si=d2db20ed12f241f1">Tú by Maye (Rearrangement)</a>
             </div>
           </div>
           <div class="project project_3">
             <div class="card">
               <div class="card_front">
-                <img class="portfolio_img" src="assets/playlist_cover.png">
+                <img class="portfolio_img" src="assets/projects/youtube.png">
               </div>
               <div class="card_back">
-                <p>something a lil cheeky</p>
-                <p>wheeeeee</p>
+                <p>i upload covers semi-regularly to<br />this channel. over 360k total views!</p>
+                <a href="https://www.youtube.com/c/ramyzhang/">watch here</a>
               </div>
             </div>
             <div class="project_3_name">
-              suuuuh dude
-            </div>
-          </div>
-          <div class="project project_4">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/playlist_cover.png">
-              </div>
-              <div class="card_back">
-                <p>something a lil cheeky</p>
-                <p>wheeeeee</p>
-              </div>
-            </div>
-            <div class="project_4_name">
-              suuuuh dude
+              <a href="https://www.youtube.com/c/ramyzhang/">Covers (Youtube Channel)</a>
             </div>
           </div>
           <div class="project project_5">

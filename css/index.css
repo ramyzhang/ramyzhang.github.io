@@ -1,19 +1,31 @@
 body {
   display:grid;
   place-content:center;
-  font-family: 'Questrial', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #59302d;
   /* TODO: change palette to earthy tones to match images */
-  height: 100%;
-  background-image: linear-gradient(to bottom right, #ebcecc, #cf8d5f);
+  padding: 2em 2em;
 }
 
 html {
-  height: 100%;
+  background-image: linear-gradient(to bottom right, #ebcecc, #cf8d5f);
+  background-attachment: fixed;
+}
+
+@media (min-width: 700px) {
+  html {
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    padding: 0em;
+  }
 }
 
 p {
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .wrapper {
@@ -75,11 +87,6 @@ p {
   border-radius: 5px;
 }
 
-.header > h3 {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
 .playlist .playlist_cover {
   grid-row: 1 / 3;
 }
@@ -98,6 +105,7 @@ p {
 
 .playlist .playlist_name > h3 {
   display:inline;
+  font-weight: 400;
 }
 
 .playlist .playlist_actions {
@@ -230,4 +238,27 @@ p {
 
 .wrapper > div {
   padding: 2em;
+}
+
+/* scrollbar customization here */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fbe4df;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ab6d60;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c75b44;
 }

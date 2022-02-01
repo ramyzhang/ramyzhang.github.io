@@ -1,31 +1,21 @@
+.wrapper .aboutme {
+  padding: 0em;
+}
+
 .aboutme {
   grid-area: b;
   background-color: #fbe4df;
-  height: 420px;
+  width: auto;
   border: 1px #59302d solid;
   border-radius: 25px;
-  overflow: auto;
+  display: inline-block;
+  overflow: hidden;
 }
 
-/* scrollbar customization here */
-
-/* width */
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #fbe4df;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #ab6d60;
-  border-radius: 3px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #c75b44;
+.aboutme_content {
+  height: 420px;
+  width: inherit;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 2em;
 }
