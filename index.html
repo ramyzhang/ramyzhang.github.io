@@ -6,23 +6,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/07ee0b876b.js" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <!-- TODO: use tiptoe photos instead!!! -->
+  <body data-barba="wrapper">
     <!-- the main contents of the website should all be contained within this wrapper -->
-    <div class="wrapper" data-barba="wrapper">
+    <div class="wrapper" data-barba="container" data-barba-namespace="index">
       <!-- introductory header -->
-      <div class="header">
+      <div class="header" data-barba-namespace="header">
         hello, i'm ramy zhang | 嗨，我是张佳楠
       </div>
       <!-- sidebar with core profile information -->
-      <div class="sidebar" data-barba="container" data-barba-namespace="sidebar">
+      <div class="sidebar" data-barba-namespace="sidebar">
         <img src="./assets/windowshot.jpg">
         <p><span style="font-weight:800">🌼🌱 ramy zhang</span></p>
         <p><em>singer-producer.</em><br /><em>software developer.</em><br /><em>compsci x cogsci @ university of toronto.</em></p>
         <p>hobbies include playing wholesome games, amateur sound design, and obsessively curating spotify playlists no one but me will listen to</p>
       </div>
       <!-- "playlist" section which is really just the navigation to different sections of the website -->
-      <div class="playlist" data-barba="container" data-barba-namespace="playlist">
+      <div class="playlist" data-barba-namespace="playlist">
         <!-- playlist info goes here -->
         <div class="playlist_cover"><img src="./assets/closeupheadshot.jpg"></div>
         <div class="playlist_name"><h3>
@@ -52,7 +51,7 @@
             <p id="song_length">5:14</p></div>
           <div class="song" id="2">
             <img src="./assets/altheadshot.jpg">
-            <p><a class="song_link" href="assets/resume.pdf">my resume</a></p>
+            <p><a class="song_link" href="assets/resume.pdf" target="_blank">my resume</a></p>
             <p id="song_length">2:24</p></div>
           <div class="song" id="3">
             <img src="./assets/headshot.jpg">
@@ -65,6 +64,7 @@
         <div class="player_buttons"><a id="go_forward" href="aboutme.html"><i class="fas fa-forward"></i></a></div>
       </div>
     </div>
+  <script src="/js/main.js"></script>
   <script src="/js/index.js"></script>
   <script src="/node_modules/animejs/lib/anime.min.js"></script>
   <script type="module" src="/js/pageanimations.js"></script>
