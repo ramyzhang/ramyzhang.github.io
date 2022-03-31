@@ -5,7 +5,7 @@
   "main": "main.js",
   "dependencies": {
     "@barba/core": "^2.9.7",
-    "gsap": "^3.9.1"
+    "animejs": "^3.2.1"
   },
   "scripts": {
     "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
