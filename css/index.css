@@ -217,21 +217,7 @@ p {
 }
 
 .playlist .player_buttons:hover {
-  animation: player-pop 0.5s ease-in-out forwards;
-}
-
-@keyframes player-pop {
-  0%{
-    transform: scale(1.0);
-  }
-
-  50%{
-    transform: scale(1.1);
-  }
-
-  100%{
-    transform: scale(1.0);
-  }
+  animation: pop_animate 0.5s ease-in-out forwards;
 }
 
 .playlist .player_buttons > a {
