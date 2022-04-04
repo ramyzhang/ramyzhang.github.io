@@ -3,7 +3,6 @@ body {
   place-content:center;
   font-family: 'Raleway', sans-serif;
   color: #59302d;
-  /* TODO: change palette to earthy tones to match images */
   padding: 2em 2em;
 }
 
@@ -163,12 +162,18 @@ p {
   grid-template-columns: repeat(6, 1fr);
   grid-row-gap:5px;
   padding: 0px 10px;
+  background-color: rgba(201, 142, 123, 0);
   margin-top: 5px;
   grid-column-gap: 10px;
   border: 1px #59302d solid;
   border-radius: 10px;
   align-self: center;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.playlist .playlist_songs .song:hover {
+  background-color: rgba(201, 142, 123, 1);
 }
 
 .playlist .playlist_songs .song > p {
@@ -209,6 +214,24 @@ p {
   grid-row: 11;
   max-height: 100%;
   text-align: center;
+}
+
+.playlist .player_buttons:hover {
+  animation: player-pop 0.5s ease-in-out forwards;
+}
+
+@keyframes player-pop {
+  0%{
+    transform: scale(1.0);
+  }
+
+  50%{
+    transform: scale(1.1);
+  }
+
+  100%{
+    transform: scale(1.0);
+  }
 }
 
 .playlist .player_buttons > a {

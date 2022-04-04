@@ -5,7 +5,6 @@ body {
   place-content:center;
   font-family: 'Raleway', sans-serif;
   color: #59302d;
-  /* TODO: change palette to earthy tones to match images */
   height: 100%;
 }
 
@@ -181,6 +180,24 @@ span .light {
   grid-row: 11;
   max-height: 100%;
   text-align: center;
+}
+
+.song .player_buttons:hover {
+  animation: player-pop 0.5s ease-in-out forwards;
+}
+
+@keyframes player-pop {
+  0%{
+    transform: scale(1.0);
+  }
+
+  50%{
+    transform: scale(1.1);
+  }
+
+  100%{
+    transform: scale(1.0);
+  }
 }
 
 .song .player_buttons > a {
