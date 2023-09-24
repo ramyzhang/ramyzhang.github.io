@@ -1,16 +1,15 @@
-import barba from '/node_modules/@barba/core';
-import anime from '/node_modules/animejs/lib/anime.es.js';
+import barba from '/@barba/core';
 
-// barba.init({
-//   // ...
-// });
-
-anime({
-  targets: 'div',
-  translateX: 250,
-  rotate: '1turn',
-  backgroundColor: '#FFF',
-  duration: 800
+barba.init({
+    transitions: [{
+        name: 'default-transition',
+        leave() {
+        // create your stunning leave animation here
+        },
+        enter() {
+        // create your amazing enter animation here
+        }
+    }]
 });
 
 console.log("helloooooo");
