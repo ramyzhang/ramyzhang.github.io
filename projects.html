@@ -15,13 +15,13 @@
   </head>
   <body>
     <!-- the main contents of the website should all be contained within this wrapper -->
-    <div class="wrapper">
-      <section class="highlights_portfolio">
-        <div class="highlights_content">
-          <!-- introductory header -->
-          <div class="header">
-            hello, i'm ramy zhang | 嗨，我是张佳楠
-          </div>
+    <section class="highlights_portfolio">
+      <div class="wrapper">
+        <!-- introductory header -->
+        <div class="header">
+          hello, i'm ramy zhang | 嗨，我是张佳楠
+        </div>
+        <div class="wrapper_body">
           <!-- "song" section which is really just the navigation to different sections of the website -->
           <div class="song">
             <!-- song back button -->
@@ -57,11 +57,13 @@
               </svg>
             </div>
             <!-- music player-like buttons go here -->
-            <div class="player_buttons"><a id="go_back" href="aboutme.html"><i class="fas fa-forward fa-flip-horizontal"></i></a></div>
-            <div class="player_buttons"><a id="pause_play" href="index.html"><i class="far fa-play-circle fa-2x"></i></a></div>
-            <div class="player_buttons"><a id="go_forward" href="links.html"><i class="fas fa-forward"></i></a></div>
+            <div class="player_buttons">
+              <div class="player_button"><a id="go_back" href="aboutme.html"><i class="fas fa-forward fa-flip-horizontal"></i></a></div>
+              <div class="player_button"><a id="pause_play" href="index.html"><i class="far fa-play-circle fa-2x"></i></a></div>
+              <div class="player_button"><a id="go_forward" href="links.html"><i class="fas fa-forward"></i></a></div>
+            </div>
           </div>
-          <!-- sidebar with core profile information -->
+        <!-- sidebar with core profile information -->
           <div class="aboutme">
             <div class="highlights_header">
               <h3>portfolio highlights</h3>
@@ -127,23 +129,25 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="full_portfolio" id="portfolio">
-        <!-- introductory header -->
-        <div class="portfolio_header">
-          <a id="header_link" href="index.html">
-            <h3>ramy's music library</h3>
-          </a>
-        </div>
+      </div>
+    </section>
+    <section class="full_portfolio" id="portfolio">
+      <!-- introductory header -->
+      <div class="portfolio_header">
+        <a id="header_link" href="index.html">
+          <h3>ramy's music library</h3>
+        </a>
         <!-- music player -->
         <div class="music_player">
           <i class="fas fa-forward fa-flip-horizontal"></i>
           <i class="far fa-play-circle fa-2x" id="player_button" onclick="pausePlay(playerButton)"></i>
           <i class="fas fa-forward"></i>
         </div>
-        <!-- "song" section which is really just the navigation to different sections of the website -->
+      </div>
+      <!-- portfolio navigation -->
+      <div class="portfolio_navbar">
+        <h3>my projects</h3>
         <div class="portfolio_nav">
-          <h3>my projects</h3>
           <div class="portfolio_tab dev" onclick="openTab('dev')" style="background-color:#e8dff5">
             dev
           </div>
@@ -157,394 +161,394 @@
             writing
           </div>
         </div>
-        <div id="dev" class="portfolio">
-            <div class="project project_8">
-              <div class="card">
-                <div class="card_front">
-                  <img class="portfolio_img" src="assets/projects/bubble.png">
-                </div>
-                <div class="card_back">
-                  <p>a witchy 2d<br />kitchen simulator<br />multi-player game!</p>
-                  <a href="https://starrylady.itch.io/bubble-bubble" target="_blank">play game</a>
-                </div>
-              </div>
-              <div class="project_8_name">
-                <a href="https://starrylady.itch.io/bubble-bubble" target="_blank">Bubble, Bubble (Unity Prototype)</a>
-              </div>
-            </div>
-          <div class="project project_1">
+      </div>
+      <div id="dev" class="portfolio">
+          <div class="project project_8">
             <div class="card">
               <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/brawlr.png">
+                <img class="portfolio_img" src="assets/projects/bubble.png">
               </div>
               <div class="card_back">
-                <p>a tinder-like<br />app to find<br />sparring partners.<br />my role: backend, chat function</p>
-                <a href="https://drive.google.com/file/d/1VQh5JrBHfWmW23bBCaWFT_5osEqgsC9A/view?usp=sharing" target="_blank">watch demo</a>
-              </div>
-            </div>
-            <div class="project_1_name">
-              <a href="https://drive.google.com/file/d/1VQh5JrBHfWmW23bBCaWFT_5osEqgsC9A/view?usp=sharing" target="_blank">Brawlr (Android Studio)</a>
-            </div>
-          </div>
-          <div class="project project_2">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/lofimaker.png">
-              </div>
-              <div class="card_back">
-                <p>point-and-click: decorate a room<br />to create unique<br />lofi beats</p>
-                <a href="https://mimimosa.itch.io/lofi-maker" target="_blank">play here</a>
-              </div>
-            </div>
-            <div class="project_2_name">
-              <a href="https://mimimosa.itch.io/lofi-maker" target="_blank">Lofi Maker (Unity Prototype)</a>
-            </div>
-          </div>
-          <div class="project project_3">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/dmc.png">
-              </div>
-              <div class="card_back">
-                <p>vanilla html/css website built for<br />my band, the dmc</p>
-                <a href="https://deezedmancollective.com/" target="_blank">view here</a>
-              </div>
-            </div>
-            <div class="project_3_name">
-              <a href="https://deezedmancollective.com/" target="_blank">DMC (HTML/CSS Website)</a>
-            </div>
-          </div>
-          <div class="project project_4">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/vintage.png">
-              </div>
-              <div class="card_back">
-                <p>imaginary ecommerce site<br />built in react, with<br /> working payments</p>
-                <a href="https://vint-age.netlify.app/" target="_blank">view here</a>
-              </div>
-            </div>
-            <div class="project_4_name">
-              <a href="https://vint-age.netlify.app/" target="_blank">Vint-Age (React App)</a>
-            </div>
-          </div>
-          <div class="project project_5">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/elevate.png">
-              </div>
-              <div class="card_back">
-                <p>mentor search platform built for<br />IGM's 2019 hackathon. 1st<br />place winner!</p>
-                <a href="https://igmteam4.invisionapp.com/prototype/ELEVATE-ck1c806ye00eqmb01dwljy8qo?v=LPqykkmIQEl9tRIpvwSzBQ%3D%3D&linkshare=urlcopied" target="_blank">view here</a>
-              </div>
-            </div>
-            <div class="project_5_name">
-              <a href="https://igmteam4.invisionapp.com/prototype/ELEVATE-ck1c806ye00eqmb01dwljy8qo?v=LPqykkmIQEl9tRIpvwSzBQ%3D%3D&linkshare=urlcopied" target="_blank">ELEVATE (UI & Product)</a>
-            </div>
-          </div>
-          <div class="project project_6">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/secvote.png">
-              </div>
-              <div class="card_back">
-                <p>decentralized<br />voting app built on ethereum in Solidity and truffleJS.</p>
-                <a href="https://youtu.be/CxNrvnLsuh0" target="_blank">view demo</a>
-              </div>
-            </div>
-            <div class="project_6_name">
-              <a href="https://youtu.be/CxNrvnLsuh0" target="_blank">SecVote (Ethereum Dapp)</a>
-            </div>
-          </div>
-          <div class="project project_7">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/ethercasino.png">
-              </div>
-              <div class="card_back">
-                <p>decentralized<br />betting app built on ethereum in Solidity and truffleJS.</p>
-                <a href="https://www.youtube.com/watch?v=1ziKS91VYLQ" target="_blank">view demo</a>
-              </div>
-            </div>
-            <div class="project_7_name">
-              <a href="https://www.youtube.com/watch?v=1ziKS91VYLQ" target="_blank">SecVote (Ethereum Dapp)</a>
-            </div>
-          </div>
-          <!-- <div class="project project_8">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/flowerpower.png">
-              </div>
-              <div class="card_back">
-                <p>Dapp for betting<br />with erc721 rewards. built with ethers.io. 1st place of shyfthack!</p>
-                <a href="https://github.com/rikardsaqe/FLOWERPOWER-1" target="_blank">view repo</a>
+                <p>a witchy 2d<br />kitchen simulator<br />multi-player game!</p>
+                <a href="https://starrylady.itch.io/bubble-bubble" target="_blank">play game</a>
               </div>
             </div>
             <div class="project_8_name">
-              <a href="https://github.com/rikardsaqe/FLOWERPOWER-1" target="_blank">FlowerPower (Ethereum Dapp)</a>
-            </div>
-          </div> -->
-        </div>
-        <div id="audio" class="portfolio" style="display:none">
-          <div class="project project_4">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="https://f4.bcbits.com/img/a2954645045_16.jpg">
-              </div>
-              <div class="card_back">
-                <p>a summery dance pop single written<br />by me and <br />produced by k.lee</p>
-                <a href="https://ramyzhang.bandcamp.com/track/tiptoe-prod-k-lee" target="_blank">listen here</a>
-              </div>
-            </div>
-            <div class="project_4_name">
-              <a href="https://ramyzhang.bandcamp.com/track/tiptoe-prod-k-lee" target="_blank">Tiptoe (2021 Single)</a>
+              <a href="https://starrylady.itch.io/bubble-bubble" target="_blank">Bubble, Bubble (Unity Prototype)</a>
             </div>
           </div>
-          <div class="project project_1">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="https://f4.bcbits.com/img/a1746673333_16.jpg">
-              </div>
-              <div class="card_back">
-                <p>an EP i wrote, produced, and recorded from my bedroom in 2020</p>
-                <a href="https://ramyzhang.bandcamp.com/album/growing-pains" target="_blank">listen here</a>
-              </div>
+        <div class="project project_1">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/brawlr.png">
             </div>
-            <div class="project_1_name">
-                <a href="https://ramyzhang.bandcamp.com/album/growing-pains" target="_blank">Growing Pains (debut EP)</a>
+            <div class="card_back">
+              <p>a tinder-like<br />app to find<br />sparring partners.<br />my role: backend, chat function</p>
+              <a href="https://drive.google.com/file/d/1VQh5JrBHfWmW23bBCaWFT_5osEqgsC9A/view?usp=sharing" target="_blank">watch demo</a>
             </div>
           </div>
-          <div class="project project_2">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="https://f4.bcbits.com/img/a2326633825_16.jpg">
-              </div>
-              <div class="card_back">
-                <p>a cover of "tú" by maye that i rearranged. 100k listens on spotify!</p>
-                <a href="https://open.spotify.com/track/7uPYIJrrdyeAtZfLVKpNy2?si=d2db20ed12f241f1" target="_blank">listen here</a>
-              </div>
-            </div>
-            <div class="project_2_name">
-              <a href="https://open.spotify.com/track/7uPYIJrrdyeAtZfLVKpNy2?si=d2db20ed12f241f1" target="_blank">Tú by Maye (Rearrangement)</a>
-            </div>
-          </div>
-          <div class="project project_3">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/youtube.png">
-              </div>
-              <div class="card_back">
-                <p>i upload covers semi-regularly to<br />this channel. over 360k total views!</p>
-                <a href="https://www.youtube.com/c/ramyzhang/" target="_blank">watch here</a>
-              </div>
-            </div>
-            <div class="project_3_name">
-              <a href="https://www.youtube.com/c/ramyzhang/" target="_blank">Covers (Youtube Channel)</a>
-            </div>
-          </div>
-          <div class="project project_5">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/frozentears.png">
-              </div>
-              <div class="card_back">
-                <p>composition and vocal performance<br />+ arrangement<br />work sample (EDM)</p>
-                <a href="https://soundcloud.com/mikeenemy/mike-enemy-x-thnderz-feat-ramy-frozen-tears" target="_blank">listen here</a>
-              </div>
-            </div>
-            <div class="project_5_name">
-               <a href="https://soundcloud.com/mikeenemy/mike-enemy-x-thnderz-feat-ramy-frozen-tears" target="_blank">Water In My Veins (Client Work)</a>
-            </div>
-          </div>
-          <div class="project project_6">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/afterthemagic.jpeg">
-              </div>
-              <div class="card_back">
-                <p>vocals & arrangement for<br />my band's 2021 EP, After The Magic</p>
-                <a href="https://deezedmancollective.bandcamp.com/album/after-the-magic" target="_blank">listen here</a>
-              </div>
-            </div>
-            <div class="project_6_name">
-              <a href="https://deezedmancollective.bandcamp.com/album/after-the-magic" target="_blank">After The Magic (DMC EP)</a>
-            </div>
-          </div>
-          <div class="project project_7">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="https://cdna.artstation.com/p/assets/images/images/033/403/602/large/eissa-nasser-1-2.jpg?1609476551">
-              </div>
-              <div class="card_back">
-                <p>sfx design for a fanmade LoL champion.<br />concept by eissa nasser</p>
-                <a href="https://drive.google.com/file/d/1aRZ8mCyUl7cJ8Kx_6gC1eOB4aEaJw4ss/view?usp=sharing" target="_blank">watch here</a>
-              </div>
-            </div>
-            <div class="project_7_name">
-              <a href="https://drive.google.com/file/d/1aRZ8mCyUl7cJ8Kx_6gC1eOB4aEaJw4ss/view?usp=sharing" target="_blank">Carmela: Ability Sound Design</a>
-            </div>
+          <div class="project_1_name">
+            <a href="https://drive.google.com/file/d/1VQh5JrBHfWmW23bBCaWFT_5osEqgsC9A/view?usp=sharing" target="_blank">Brawlr (Android Studio)</a>
           </div>
         </div>
-        <div id="consulting" class="portfolio" style="display:none">
-          <div class="project project_1">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="https://www.apkmirror.com/wp-content/uploads/2022/01/22/61e596babe3be.png">
-              </div>
-              <div class="card_back">
-                <p>increasing awareness for Wealthsimple's<br />RESP platform</p>
-                <a href="assets/projects/wealthsimple.pdf" target="_blank">listen here</a>
-              </div>
+        <div class="project project_2">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/lofimaker.png">
             </div>
-            <div class="project_1_name">
-              <a href="assets/projects/wealthsimple.pdf" target="_blank">Wealthsimple Recommendation</a>
+            <div class="card_back">
+              <p>point-and-click: decorate a room<br />to create unique<br />lofi beats</p>
+              <a href="https://mimimosa.itch.io/lofi-maker" target="_blank">play here</a>
             </div>
           </div>
-          <div class="project project_2">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="https://pbs.twimg.com/profile_images/839955038575411201/RtLdWu3__400x400.jpg">
-              </div>
-              <div class="card_back">
-                <p>feature proposal<br />for emojiHealth, a healthcare chatbot</p>
-                <a href="assets/projects/emojihealth.pdf" target="_blank">read here</a>
-              </div>
-            </div>
-            <div class="project_2_name">
-              <a href="assets/projects/emojihealth.pdf" target="_blank">emojiHEALTH Recommendation</a>
-            </div>
-          </div>
-          <div class="project project_3">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/freshstop.png">
-              </div>
-              <div class="card_back">
-                <p>food waste deep dive + d2c product proposal for farm-<br />to-table delivery</p>
-                <a href="assets/projects/freshstop.pdf" target="_blank">read here</a>
-              </div>
-            </div>
-            <div class="project_3_name">
-              <a href="assets/projects/freshstop.pdf" target="_blank">FreshStop Proposal</a>
-            </div>
-          </div>
-          <div class="project project_4">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/kidogo.png">
-              </div>
-              <div class="card_back">
-                <p>diversified revenue streams for<br />Kidogo's daycare operators</p>
-                <a href="assets/projects/kidogo.pdf" target="_blank">read here</a>
-              </div>
-            </div>
-            <div class="project_4_name">
-              <a href="assets/projects/kidogo.pdf" target="_blank">Kidogo Recommendation</a>
-            </div>
-          </div>
-          <div class="project project_5">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/interac.png">
-              </div>
-              <div class="card_back">
-                <p>transit card digitalization proposal for<br />Interac</p>
-                <a href="assets/projects/interac.pdf" target="_blank">read here</a>
-              </div>
-            </div>
-            <div class="project_5_name">
-              <a href="assets/projects/interac.pdf" target="_blank">Interac Recommendation</a>
-            </div>
+          <div class="project_2_name">
+            <a href="https://mimimosa.itch.io/lofi-maker" target="_blank">Lofi Maker (Unity Prototype)</a>
           </div>
         </div>
-        <div id="writing" class="portfolio" style="display:none">
-          <!-- <div class="project project_1">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/bleedtransparent.jpeg">
-              </div>
-              <div class="card_back">
-                <p>a deep dive into the taboo of menstruation and a solution proposal</p>
-                <a href="http://ramyzhang.com/blog/2019/11/20/we-all-bleed-transparent/" target="-blank">read here</a>
-              </div>
+        <div class="project project_3">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/dmc.png">
             </div>
-            <div class="project_1_name">
-              <a href="http://ramyzhang.com/blog/2019/11/20/we-all-bleed-transparent/" target="-blank">Bleeding Transparent</a>
-            </div>
-          </div> -->
-          <div class="project project_2">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/genome.png">
-              </div>
-              <div class="card_back">
-                 <p>a breakdown of de novo genome synthesis in simple terms</p>
-                 <a href="https://medium.com/@ramyjzh/build-a-synthetic-genome-is-the-new-build-a-bear-ab31036bc190?source=friends_link&sk=d4cf14a80073225fe13e02b335ea6844" target="_blank">read here</a>
-              </div>
-            </div>
-            <div class="project_2_name">
-              <a href="https://medium.com/@ramyjzh/build-a-synthetic-genome-is-the-new-build-a-bear-ab31036bc190?source=friends_link&sk=d4cf14a80073225fe13e02b335ea6844" target="_blank">Build-a-Synthetic-Genome</a>
+            <div class="card_back">
+              <p>vanilla html/css website built for<br />my band, the dmc</p>
+              <a href="https://deezedmancollective.com/" target="_blank">view here</a>
             </div>
           </div>
-          <div class="project project_3">
-            <div class="card">
-              <div class="card_front">
-                <img class="portfolio_img" src="assets/projects/dna.png">
-              </div>
-              <div class="card_back">
-                  <p>a comprehensive and readable introduction to synthetic biology</p>
-                  <a href="https://medium.com/@ramyjzh/synthetic-biology-redesigning-the-blueprint-of-life-2-2-387cd2df31a7?source=friends_link&sk=8b767b9542f006e988d9f941756a2d5d" target="_blank">read here</a>
-              </div>
-            </div>
-            <div class="project_3_name">
-                <a href="https://medium.com/@ramyjzh/synthetic-biology-redesigning-the-blueprint-of-life-2-2-387cd2df31a7?source=friends_link&sk=8b767b9542f006e988d9f941756a2d5d" target="_blank">Introduction to Synthetic Biology</a>
-            </div>
-          </div>
-          <div class="project project_4">
-            <div class="card">
-              <div class="card_front">
-                  <img class="portfolio_img" src="assets/projects/bulletproofs.png">
-              </div>
-              <div class="card_back">
-                  <p>an eli5 breakdown of bulletproofs and zero-knowledge proofs</p>
-                  <a href="https://blog.goodaudience.com/make-it-bulletproof-183c7153b648?source=friends_link&sk=e6de3dbbeaf0f6f2efa8822885b0b80f" target="_blank">read here</a>
-              </div>
-            </div>
-            <div class="project_4_name">
-                <a href="https://blog.goodaudience.com/make-it-bulletproof-183c7153b648?source=friends_link&sk=e6de3dbbeaf0f6f2efa8822885b0b80f" target="_blank">Make it Bulletproof</a>
-            </div>
-          </div>
-          <div class="project project_5">
-            <div class="card">
-              <div class="card_front">
-                  <img class="portfolio_img" src="assets/projects/sharding.png">
-              </div>
-              <div class="card_back">
-                  <p>an eli5 breakdown of ethereum's sharding proposal</p>
-                  <a href="https://medium.com/coinmonks/heres-the-deal-on-sharding-96d8591856c4?source=friends_link&sk=6787f6c90241c68fcce6562fa454cc97" target="_blank">read here</a>
-              </div>
-            </div>
-            <div class="project_5_name">
-                <a href="https://medium.com/coinmonks/heres-the-deal-on-sharding-96d8591856c4?source=friends_link&sk=6787f6c90241c68fcce6562fa454cc97" target="_blank">Ethereum's Sharding</a>
-            </div>
-          </div>
-          <div class="project project_6">
-            <div class="card">
-              <div class="card_front">
-                  <img class="portfolio_img" src="assets/projects/byzantine.png">
-              </div>
-              <div class="card_back">
-                  <p>an eli5 breakdown of byzantine fault tolerance in distributed systems</p>
-                  <a href="https://medium.com/coinmonks/breaking-it-down-byzantine-fault-tolerance-a8301bef5986?source=friends_link&sk=2fb6642488d43c76799a3363277d4177" target="_blank">read here</a>
-              </div>
-            </div>
-            <div class="project_6_name">
-                <a href="https://medium.com/coinmonks/breaking-it-down-byzantine-fault-tolerance-a8301bef5986?source=friends_link&sk=2fb6642488d43c76799a3363277d4177" target="_blank">Byzantine Fault Tolerance</a>
-            </div>
+          <div class="project_3_name">
+            <a href="https://deezedmancollective.com/" target="_blank">DMC (HTML/CSS Website)</a>
           </div>
         </div>
-      </section>
-    </div>
+        <div class="project project_4">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/vintage.png">
+            </div>
+            <div class="card_back">
+              <p>imaginary ecommerce site<br />built in react, with<br /> working payments</p>
+              <a href="https://vint-age.netlify.app/" target="_blank">view here</a>
+            </div>
+          </div>
+          <div class="project_4_name">
+            <a href="https://vint-age.netlify.app/" target="_blank">Vint-Age (React App)</a>
+          </div>
+        </div>
+        <div class="project project_5">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/elevate.png">
+            </div>
+            <div class="card_back">
+              <p>mentor search platform built for<br />IGM's 2019 hackathon. 1st<br />place winner!</p>
+              <a href="https://igmteam4.invisionapp.com/prototype/ELEVATE-ck1c806ye00eqmb01dwljy8qo?v=LPqykkmIQEl9tRIpvwSzBQ%3D%3D&linkshare=urlcopied" target="_blank">view here</a>
+            </div>
+          </div>
+          <div class="project_5_name">
+            <a href="https://igmteam4.invisionapp.com/prototype/ELEVATE-ck1c806ye00eqmb01dwljy8qo?v=LPqykkmIQEl9tRIpvwSzBQ%3D%3D&linkshare=urlcopied" target="_blank">ELEVATE (UI & Product)</a>
+          </div>
+        </div>
+        <div class="project project_6">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/secvote.png">
+            </div>
+            <div class="card_back">
+              <p>decentralized<br />voting app built on ethereum in Solidity and truffleJS.</p>
+              <a href="https://youtu.be/CxNrvnLsuh0" target="_blank">view demo</a>
+            </div>
+          </div>
+          <div class="project_6_name">
+            <a href="https://youtu.be/CxNrvnLsuh0" target="_blank">SecVote (Ethereum Dapp)</a>
+          </div>
+        </div>
+        <div class="project project_7">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/ethercasino.png">
+            </div>
+            <div class="card_back">
+              <p>decentralized<br />betting app built on ethereum in Solidity and truffleJS.</p>
+              <a href="https://www.youtube.com/watch?v=1ziKS91VYLQ" target="_blank">view demo</a>
+            </div>
+          </div>
+          <div class="project_7_name">
+            <a href="https://www.youtube.com/watch?v=1ziKS91VYLQ" target="_blank">SecVote (Ethereum Dapp)</a>
+          </div>
+        </div>
+        <!-- <div class="project project_8">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/flowerpower.png">
+            </div>
+            <div class="card_back">
+              <p>Dapp for betting<br />with erc721 rewards. built with ethers.io. 1st place of shyfthack!</p>
+              <a href="https://github.com/rikardsaqe/FLOWERPOWER-1" target="_blank">view repo</a>
+            </div>
+          </div>
+          <div class="project_8_name">
+            <a href="https://github.com/rikardsaqe/FLOWERPOWER-1" target="_blank">FlowerPower (Ethereum Dapp)</a>
+          </div>
+        </div> -->
+      </div>
+      <div id="audio" class="portfolio" style="display:none">
+        <div class="project project_4">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="https://f4.bcbits.com/img/a2954645045_16.jpg">
+            </div>
+            <div class="card_back">
+              <p>a summery dance pop single written<br />by me and <br />produced by k.lee</p>
+              <a href="https://ramyzhang.bandcamp.com/track/tiptoe-prod-k-lee" target="_blank">listen here</a>
+            </div>
+          </div>
+          <div class="project_4_name">
+            <a href="https://ramyzhang.bandcamp.com/track/tiptoe-prod-k-lee" target="_blank">Tiptoe (2021 Single)</a>
+          </div>
+        </div>
+        <div class="project project_1">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="https://f4.bcbits.com/img/a1746673333_16.jpg">
+            </div>
+            <div class="card_back">
+              <p>an EP i wrote, produced, and recorded from my bedroom in 2020</p>
+              <a href="https://ramyzhang.bandcamp.com/album/growing-pains" target="_blank">listen here</a>
+            </div>
+          </div>
+          <div class="project_1_name">
+              <a href="https://ramyzhang.bandcamp.com/album/growing-pains" target="_blank">Growing Pains (debut EP)</a>
+          </div>
+        </div>
+        <div class="project project_2">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="https://f4.bcbits.com/img/a2326633825_16.jpg">
+            </div>
+            <div class="card_back">
+              <p>a cover of "tú" by maye that i rearranged. 100k listens on spotify!</p>
+              <a href="https://open.spotify.com/track/7uPYIJrrdyeAtZfLVKpNy2?si=d2db20ed12f241f1" target="_blank">listen here</a>
+            </div>
+          </div>
+          <div class="project_2_name">
+            <a href="https://open.spotify.com/track/7uPYIJrrdyeAtZfLVKpNy2?si=d2db20ed12f241f1" target="_blank">Tú by Maye (Rearrangement)</a>
+          </div>
+        </div>
+        <div class="project project_3">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/youtube.png">
+            </div>
+            <div class="card_back">
+              <p>i upload covers semi-regularly to<br />this channel. over 360k total views!</p>
+              <a href="https://www.youtube.com/c/ramyzhang/" target="_blank">watch here</a>
+            </div>
+          </div>
+          <div class="project_3_name">
+            <a href="https://www.youtube.com/c/ramyzhang/" target="_blank">Covers (Youtube Channel)</a>
+          </div>
+        </div>
+        <div class="project project_5">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/frozentears.png">
+            </div>
+            <div class="card_back">
+              <p>composition and vocal performance<br />+ arrangement<br />work sample (EDM)</p>
+              <a href="https://soundcloud.com/mikeenemy/mike-enemy-x-thnderz-feat-ramy-frozen-tears" target="_blank">listen here</a>
+            </div>
+          </div>
+          <div class="project_5_name">
+              <a href="https://soundcloud.com/mikeenemy/mike-enemy-x-thnderz-feat-ramy-frozen-tears" target="_blank">Water In My Veins (Client Work)</a>
+          </div>
+        </div>
+        <div class="project project_6">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/afterthemagic.jpeg">
+            </div>
+            <div class="card_back">
+              <p>vocals & arrangement for<br />my band's 2021 EP, After The Magic</p>
+              <a href="https://deezedmancollective.bandcamp.com/album/after-the-magic" target="_blank">listen here</a>
+            </div>
+          </div>
+          <div class="project_6_name">
+            <a href="https://deezedmancollective.bandcamp.com/album/after-the-magic" target="_blank">After The Magic (DMC EP)</a>
+          </div>
+        </div>
+        <div class="project project_7">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="https://cdna.artstation.com/p/assets/images/images/033/403/602/large/eissa-nasser-1-2.jpg?1609476551">
+            </div>
+            <div class="card_back">
+              <p>sfx design for a fanmade LoL champion.<br />concept by eissa nasser</p>
+              <a href="https://drive.google.com/file/d/1aRZ8mCyUl7cJ8Kx_6gC1eOB4aEaJw4ss/view?usp=sharing" target="_blank">watch here</a>
+            </div>
+          </div>
+          <div class="project_7_name">
+            <a href="https://drive.google.com/file/d/1aRZ8mCyUl7cJ8Kx_6gC1eOB4aEaJw4ss/view?usp=sharing" target="_blank">Carmela: Ability Sound Design</a>
+          </div>
+        </div>
+      </div>
+      <div id="consulting" class="portfolio" style="display:none">
+        <div class="project project_1">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="https://www.apkmirror.com/wp-content/uploads/2022/01/22/61e596babe3be.png">
+            </div>
+            <div class="card_back">
+              <p>increasing awareness for Wealthsimple's<br />RESP platform</p>
+              <a href="assets/projects/wealthsimple.pdf" target="_blank">listen here</a>
+            </div>
+          </div>
+          <div class="project_1_name">
+            <a href="assets/projects/wealthsimple.pdf" target="_blank">Wealthsimple Recommendation</a>
+          </div>
+        </div>
+        <div class="project project_2">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="https://pbs.twimg.com/profile_images/839955038575411201/RtLdWu3__400x400.jpg">
+            </div>
+            <div class="card_back">
+              <p>feature proposal<br />for emojiHealth, a healthcare chatbot</p>
+              <a href="assets/projects/emojihealth.pdf" target="_blank">read here</a>
+            </div>
+          </div>
+          <div class="project_2_name">
+            <a href="assets/projects/emojihealth.pdf" target="_blank">emojiHEALTH Recommendation</a>
+          </div>
+        </div>
+        <div class="project project_3">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/freshstop.png">
+            </div>
+            <div class="card_back">
+              <p>food waste deep dive + d2c product proposal for farm-<br />to-table delivery</p>
+              <a href="assets/projects/freshstop.pdf" target="_blank">read here</a>
+            </div>
+          </div>
+          <div class="project_3_name">
+            <a href="assets/projects/freshstop.pdf" target="_blank">FreshStop Proposal</a>
+          </div>
+        </div>
+        <div class="project project_4">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/kidogo.png">
+            </div>
+            <div class="card_back">
+              <p>diversified revenue streams for<br />Kidogo's daycare operators</p>
+              <a href="assets/projects/kidogo.pdf" target="_blank">read here</a>
+            </div>
+          </div>
+          <div class="project_4_name">
+            <a href="assets/projects/kidogo.pdf" target="_blank">Kidogo Recommendation</a>
+          </div>
+        </div>
+        <div class="project project_5">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/interac.png">
+            </div>
+            <div class="card_back">
+              <p>transit card digitalization proposal for<br />Interac</p>
+              <a href="assets/projects/interac.pdf" target="_blank">read here</a>
+            </div>
+          </div>
+          <div class="project_5_name">
+            <a href="assets/projects/interac.pdf" target="_blank">Interac Recommendation</a>
+          </div>
+        </div>
+      </div>
+      <div id="writing" class="portfolio" style="display:none">
+        <!-- <div class="project project_1">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/bleedtransparent.jpeg">
+            </div>
+            <div class="card_back">
+              <p>a deep dive into the taboo of menstruation and a solution proposal</p>
+              <a href="http://ramyzhang.com/blog/2019/11/20/we-all-bleed-transparent/" target="-blank">read here</a>
+            </div>
+          </div>
+          <div class="project_1_name">
+            <a href="http://ramyzhang.com/blog/2019/11/20/we-all-bleed-transparent/" target="-blank">Bleeding Transparent</a>
+          </div>
+        </div> -->
+        <div class="project project_2">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/genome.png">
+            </div>
+            <div class="card_back">
+                <p>a breakdown of de novo genome synthesis in simple terms</p>
+                <a href="https://medium.com/@ramyjzh/build-a-synthetic-genome-is-the-new-build-a-bear-ab31036bc190?source=friends_link&sk=d4cf14a80073225fe13e02b335ea6844" target="_blank">read here</a>
+            </div>
+          </div>
+          <div class="project_2_name">
+            <a href="https://medium.com/@ramyjzh/build-a-synthetic-genome-is-the-new-build-a-bear-ab31036bc190?source=friends_link&sk=d4cf14a80073225fe13e02b335ea6844" target="_blank">Build-a-Synthetic-Genome</a>
+          </div>
+        </div>
+        <div class="project project_3">
+          <div class="card">
+            <div class="card_front">
+              <img class="portfolio_img" src="assets/projects/dna.png">
+            </div>
+            <div class="card_back">
+                <p>a comprehensive and readable introduction to synthetic biology</p>
+                <a href="https://medium.com/@ramyjzh/synthetic-biology-redesigning-the-blueprint-of-life-2-2-387cd2df31a7?source=friends_link&sk=8b767b9542f006e988d9f941756a2d5d" target="_blank">read here</a>
+            </div>
+          </div>
+          <div class="project_3_name">
+              <a href="https://medium.com/@ramyjzh/synthetic-biology-redesigning-the-blueprint-of-life-2-2-387cd2df31a7?source=friends_link&sk=8b767b9542f006e988d9f941756a2d5d" target="_blank">Introduction to Synthetic Biology</a>
+          </div>
+        </div>
+        <div class="project project_4">
+          <div class="card">
+            <div class="card_front">
+                <img class="portfolio_img" src="assets/projects/bulletproofs.png">
+            </div>
+            <div class="card_back">
+                <p>an eli5 breakdown of bulletproofs and zero-knowledge proofs</p>
+                <a href="https://blog.goodaudience.com/make-it-bulletproof-183c7153b648?source=friends_link&sk=e6de3dbbeaf0f6f2efa8822885b0b80f" target="_blank">read here</a>
+            </div>
+          </div>
+          <div class="project_4_name">
+              <a href="https://blog.goodaudience.com/make-it-bulletproof-183c7153b648?source=friends_link&sk=e6de3dbbeaf0f6f2efa8822885b0b80f" target="_blank">Make it Bulletproof</a>
+          </div>
+        </div>
+        <div class="project project_5">
+          <div class="card">
+            <div class="card_front">
+                <img class="portfolio_img" src="assets/projects/sharding.png">
+            </div>
+            <div class="card_back">
+                <p>an eli5 breakdown of ethereum's sharding proposal</p>
+                <a href="https://medium.com/coinmonks/heres-the-deal-on-sharding-96d8591856c4?source=friends_link&sk=6787f6c90241c68fcce6562fa454cc97" target="_blank">read here</a>
+            </div>
+          </div>
+          <div class="project_5_name">
+              <a href="https://medium.com/coinmonks/heres-the-deal-on-sharding-96d8591856c4?source=friends_link&sk=6787f6c90241c68fcce6562fa454cc97" target="_blank">Ethereum's Sharding</a>
+          </div>
+        </div>
+        <div class="project project_6">
+          <div class="card">
+            <div class="card_front">
+                <img class="portfolio_img" src="assets/projects/byzantine.png">
+            </div>
+            <div class="card_back">
+                <p>an eli5 breakdown of byzantine fault tolerance in distributed systems</p>
+                <a href="https://medium.com/coinmonks/breaking-it-down-byzantine-fault-tolerance-a8301bef5986?source=friends_link&sk=2fb6642488d43c76799a3363277d4177" target="_blank">read here</a>
+            </div>
+          </div>
+          <div class="project_6_name">
+              <a href="https://medium.com/coinmonks/breaking-it-down-byzantine-fault-tolerance-a8301bef5986?source=friends_link&sk=2fb6642488d43c76799a3363277d4177" target="_blank">Byzantine Fault Tolerance</a>
+          </div>
+        </div>
+      </div>
+    </section>
   <script src="/js/projects.js"></script>
   <script type="module" src="/js/pageanimations.js"></script>
   </body>

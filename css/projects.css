@@ -1,63 +1,20 @@
-.wrapper {
-  width: 100%;
-  height: 100vh;
-  display: block;
-}
-
-@media (min-width: 700px) {
-  .wrapper {
-    width: 100%;
-  }
+body {
+  height: auto;
+  flex-direction: column;
 }
 
 section {
   height: auto;
-  display: grid;
-  place-content: center;
-  padding: 1em;
 }
 
 @media (min-width: 700px) {
   section {
     height: 100vh;
-    display: grid;
-    place-content: center;
-    padding: 0em;
-  }
-}
-
-@media (min-width: 700px) {
-  html {
-    height: 100vh;
-  }
-}
-
-.highlights_content {
-  display: grid;
-  width: 320px;
-  height: auto;
-  grid-gap: 1em;
-  grid-template-areas:
-      "c c"
-      "b b"
-      "a a";
-  place-self: center;
-}
-
-@media (min-width: 700px) {
-  .highlights_content {
-    width: 700px;
-    height:auto;
-    grid-template-columns: 320px 360px;
-    grid-gap: 20px;
-    grid-template-areas:
-        "c c"
-        "a b";
+    padding: 0px;
   }
 }
 
 .header {
-  grid-area: c;
   background-color: #ddb6b3;
 }
 
@@ -67,14 +24,21 @@ section {
 }
 
 .aboutme {
-  grid-area: b;
-  /* background-color: #fbe4df; */
+  max-height: 100%;
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+@media (min-width: 700px) {
+  .aboutme {
+    padding: 0px;
+  }
 }
 
 .aboutme > .highlights_header {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  padding-bottom: 1em;
+  display: flex;
 }
 
 .highlights_header > h3 {
@@ -86,29 +50,39 @@ section {
 
 .highlights_header > i {
   align-self: center;
-  justify-self: end;
+  margin-left: auto;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
 }
 
+.highlights_header > i:hover {
+  animation: player-pop 0.3s ease-in-out forwards;
+}
+
 .aboutme > .highlights_album {
   display: grid;
-  width: subgrid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  box-sizing: border-box;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
   grid-gap: 20px;
+  flex-grow: 1;
 }
 
 .highlights_album > .project {
-  display: grid;
-  grid-template-rows: repeat(2, auto);
-  grid-gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  text-align: center;
+  flex-direction: column;
+  row-gap: 10px;
   perspective: 1000px;
 }
 
 .card {
   display: flex;
+  width: 160px;
+  height: 160px;
   position: relative;
   text-align: center;
   transition: transform 0.6s;
@@ -138,12 +112,24 @@ section {
 .card_back {
   background-color: #e0ab98;
   position: absolute;
+  box-sizing: border-box;
+  overflow: scroll;
   width: 100%;
   height: 100%;
+  padding: 10px;
   color: white;
   transform: rotateX(-180deg);
-  border: 1px #59302d solid;
+  border: 1px #ffffff solid;
   border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card_back > p {
+  padding: 0px;
+  margin-top: 0px;
 }
 
 .card_back > a {
@@ -151,6 +137,12 @@ section {
   border: solid;
   border-width: thin;
   padding: 5px;
+  border-radius: 5px;
+}
+
+.card_back > a:hover {
+  background-color: rgba(255, 255, 255, 0.34);
+  transition: 100ms;
 }
 
 .project_name > a {
@@ -158,18 +150,32 @@ section {
   color: #59302d;
 }
 
-.portfolio_nav {
+section .portfolio {
   display: flex;
-  width: 320px;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.portfolio_header {
+  background-color: orange;
+}
+
+.portfolio_navbar {
+  display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  column-gap: 1em;
-  padding-bottom: 1em;
+  flex-direction: row;
+  column-gap: 20px;
+  background-color: pink;
+}
+
+.portflio_navbar > h3 {
+  margin: 0px;
 }
 
 @media (min-width: 700px) {
-  .portfolio_nav {
+  .portfolio_navbar {
     display: flex;
     width: auto;
     justify-content: flex-start;
@@ -177,6 +183,12 @@ section {
     column-gap: 1em;
     padding-bottom: 0em;
   }
+}
+
+.portfolio_nav {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
 }
 
 .portfolio_tab {
