@@ -115,11 +115,10 @@ section {
 .card_back {
   background-color: #e0ab98;
   position: absolute;
-  box-sizing: border-box;
-  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
-  padding: 10px;
   color: white;
   transform: rotateX(-180deg);
   border: 1px #ffffff solid;
@@ -128,11 +127,14 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  row-gap: 10px;
+  scrollbar-color: #ab6d60 #fbe4df;
+  scrollbar-width: thin;
 }
 
 .card_back > p {
   padding: 0px;
-  margin-top: 0px;
+  margin: 10px 5px 0px 5px;
 }
 
 .card_back > a {
@@ -141,6 +143,7 @@ section {
   border-width: thin;
   padding: 5px;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .card_back > a:hover {

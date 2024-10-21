@@ -20,8 +20,6 @@ body {
 html {
   background-image: linear-gradient(to bottom right, #ebcecc, #cf8d5f);
   background-attachment: fixed;
-  scrollbar-color: #ab6d60 #fbe4df;
-  scrollbar-width: thin;
 }
 
 p {
