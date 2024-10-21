@@ -5,6 +5,9 @@ body {
 
 section {
   height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 700px) {
@@ -150,92 +153,81 @@ section {
   color: #59302d;
 }
 
-section .portfolio {
-  display: flex;
+.full_portfolio {
   flex-direction: column;
   row-gap: 10px;
 }
 
-.portfolio_header {
-  background-color: orange;
-}
-
 .portfolio_navbar {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   column-gap: 20px;
-  background-color: pink;
+  padding-bottom: 10px;
 }
 
-.portflio_navbar > h3 {
+.portfolio_navbar > h3 {
   margin: 0px;
-}
-
-@media (min-width: 700px) {
-  .portfolio_navbar {
-    display: flex;
-    width: auto;
-    justify-content: flex-start;
-    align-items: center;
-    column-gap: 1em;
-    padding-bottom: 0em;
-  }
 }
 
 .portfolio_nav {
   display: flex;
   flex-direction: row;
   column-gap: 10px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .portfolio_tab {
   cursor: pointer;
+  padding: 0px;
+  margin: 0px;
 }
 
 .portfolio {
-  display:grid;
-  padding: 1.5em;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: baseline;
+  gap: 20px;
+  padding: 20px;
   background-color: #e8dff5;
-  width: 320px;
-  height:auto;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2em;
-  margin-bottom: 1em;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 700px) {
   .portfolio {
-    width: 650px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 2em;
-    margin-bottom: 0em;
+    width: 660px;
+    grid-template-columns: auto auto auto auto;
+    margin-bottom: 0px;
   }
 }
 
 .portfolio > .project {
-  display: grid;
-  grid-template-rows: repeat(2, auto);
-  grid-gap: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  row-gap: 10px;
   perspective: 1000px;
 }
 
-.portfolio_header {
-  height: 30px;
-  text-align: center;
-  padding-bottom: 1em;
+.portfolio > .project > .card {
+  width: 150px;
+  height: 150px;
 }
 
-@media (min-width: 700px) {
-  .portfolio_header {
-    height: 30px;
-    width: auto;
-    text-align: center;
-  }
+.portfolio_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .portfolio_header > a#header_link {
@@ -245,45 +237,20 @@ section .portfolio {
 
 .music_player {
   display: flex;
-  width: auto;
   justify-content: center;
   align-items: center;
-  gap: 2em;
-  padding-bottom: 1em;
+  column-gap: 20px;
+  margin-bottom: 10px;
 }
 
-.music_player > i#player_button {
+.music_player .player_button {
   cursor: pointer;
 }
 
-@media (min-width: 700px) {
-  .music_player {
-    place-self: center;
-  }
+.music_player .player_button:hover {
+  animation: player-pop 0.3s ease-in-out forwards;
 }
 
-.music_player .pause_play {
-  cursor: pointer;
-  display: grid;
-  place-self: center;
-}
-
-.music_player .player {
-  padding-left: 1em;
-  display: grid;
-  place-self: center;
-}
-
-.music_player .player > svg {
-  width: 100%;
-}
-
-.portfolio_img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.highlights_content > div {
-  padding: 2em;
+.music_player #player_button:hover {
+  animation: player-pop 0.3s ease-in-out forwards;
 }
