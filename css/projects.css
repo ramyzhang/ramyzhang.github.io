@@ -159,16 +159,21 @@ section {
 .full_portfolio {
   flex-direction: column;
   row-gap: 10px;
+  margin: 0px 40px;
+}
+
+@media (min-width: 700px) {
+  .full_portfolio {
+    margin: 0px;
+  }
 }
 
 .portfolio_navbar {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-  column-gap: 20px;
+  flex-direction: column;
+  row-gap: 10px;
   padding-bottom: 10px;
 }
 
@@ -179,7 +184,9 @@ section {
 .portfolio_nav {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   column-gap: 10px;
+  row-gap: 5px;
   padding: 0px;
   margin: 0px;
 }
@@ -191,6 +198,8 @@ section {
 }
 
 .portfolio {
+  width: 100%;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: auto auto;
   align-items: baseline;
@@ -203,6 +212,7 @@ section {
 @media (min-width: 700px) {
   .portfolio {
     width: 660px;
+    box-sizing: content-box;
     grid-template-columns: auto auto auto auto;
     margin-bottom: 0px;
   }

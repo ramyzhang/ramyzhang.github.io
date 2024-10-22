@@ -1,5 +1,5 @@
 const playerButton = document.getElementById('player_button');
-const tabColours = ["#e8dff5", "#fce1e4", "#fcf4dd", "#ddedea", "#daeaf6"]
+const tabColours = ["#e8dff5", "#99db9c", "#fce1e4", "#fcf4dd", "#ddedea", "#daeaf6"]
 const portfolioPage = document.getElementById('portfolio');
 
 function pausePlay(playerButton) {
