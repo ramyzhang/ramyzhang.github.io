@@ -8,7 +8,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 @media (min-width: 700px) {
@@ -216,7 +217,7 @@ p > a {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 /* Track */
