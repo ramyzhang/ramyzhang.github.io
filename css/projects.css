@@ -184,6 +184,7 @@ section {
 .portfolio_nav {
   display: flex;
   flex-direction: row;
+  align-items: baseline;
   flex-wrap: wrap;
   column-gap: 10px;
   row-gap: 5px;
@@ -212,6 +213,8 @@ section {
 @media (min-width: 700px) {
   .portfolio {
     width: 660px;
+    height: 420px;
+    overflow-y: auto;
     box-sizing: content-box;
     grid-template-columns: 150px 150px 150px 150px;
     margin-bottom: 0px;
