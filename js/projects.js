@@ -28,6 +28,6 @@ function openTab(tabName) {
   document.querySelector(`.${tabName}`).style.backgroundColor = tabColours[colourIndex];
 }
 
-function scrollToPortfolio(pageId) {
+function scrollToPortfolio() {
   portfolioPage.scrollIntoView({behavior: "smooth"});
 }

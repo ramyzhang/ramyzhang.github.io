@@ -19,17 +19,14 @@
   scrollbar-color: #ab6d60;
 }
 
-/* width */
 .aboutme_content::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 .aboutme_content::-webkit-scrollbar-track {
   background: #fbe4df;
 }
 
-/* Handle */
 .aboutme_content::-webkit-scrollbar-thumb {
   background: #ab6d60;
   border-radius: 3px;
