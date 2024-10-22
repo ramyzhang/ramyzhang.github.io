@@ -10,6 +10,29 @@ body {
   justify-content: center;
   overflow-y: auto;
   overflow-x: hidden;
+  animation: load-in 0.5s ease-in-out forwards;
+}
+
+.animate-out {
+  animation: load-out 0.5s ease-in-out forwards;
+}
+
+@keyframes load-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes load-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @media (min-width: 700px) {
@@ -112,6 +135,10 @@ span .light {
   align-items: center;
 }
 
+.song_back:hover {
+  cursor: pointer;
+}
+
 .back_button:hover {
   animation: player-pop 0.3s ease-in-out forwards;
 }
@@ -184,6 +211,7 @@ span .light {
 }
 
 .song .player_buttons .player_button:hover {
+  cursor: pointer;
   animation: player-pop 0.5s ease-in-out forwards;
 }
 

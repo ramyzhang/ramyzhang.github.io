@@ -14,6 +14,7 @@
     <title>ramy zhang</title>
   </head>
   <body>
+    <script>0</script>
     <!-- the main contents of the website should all be contained within this wrapper -->
     <section class="highlights_portfolio">
       <div class="wrapper">
@@ -25,16 +26,12 @@
           <!-- "song" section which is really just the navigation to different sections of the website -->
           <div class="song">
             <!-- song back button -->
-            <div class="song_back">
+            <div class="song_back" onclick="navigateHome()">
               <div class="back_button">
-                <a href="index.html">
-                  <i class="fas fa-arrow-left fa-lg"></i>
-                </a>
+                <i class="fas fa-arrow-left fa-lg"></i>
               </div>
               <div class="back_text">
-                <a href="index.html">
-                  Return
-                </a>
+                Return
               </div>
             </div>
             <!-- song title section -->
@@ -58,9 +55,9 @@
             </div>
             <!-- music player-like buttons go here -->
             <div class="player_buttons">
-              <div class="player_button"><a id="go_back" href="aboutme.html"><i class="fas fa-forward fa-flip-horizontal"></i></a></div>
-              <div class="player_button"><a id="pause_play" href="index.html"><i class="far fa-play-circle fa-2x"></i></a></div>
-              <div class="player_button"><a id="go_forward" href="links.html"><i class="fas fa-forward"></i></a></div>
+              <div class="player_button" onclick="navigate(false)"><a id="go_back" href="aboutme.html"><i class="fas fa-forward fa-flip-horizontal"></i></a></div>
+              <div class="player_button" onclick="navigateHome()"><a id="pause_play" href="index.html"><i class="far fa-play-circle fa-2x"></i></a></div>
+              <div class="player_button" onclick="navigate(true)"><a id="go_forward" href="links.html"><i class="fas fa-forward"></i></a></div>
             </div>
           </div>
         <!-- sidebar with core profile information -->
@@ -582,7 +579,7 @@
         </div>
       </div>
     </section>
-  <script src="/js/projects.js"></script>
-  <script type="module" src="/js/pageanimations.js"></script>
+    <script src="/js/projects.js"></script>
+    <script src="/js/animate.js"></script>
   </body>
 </html>

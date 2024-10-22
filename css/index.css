@@ -4,6 +4,7 @@ body {
   color: #59302d;
   overflow: auto;
   height: 100vh;
+  animation: load-in 0.5s ease-in-out forwards;
 }
 
 html {
@@ -24,6 +25,28 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.animate-out {
+  animation: load-out 0.5s ease-in-out forwards;
+}
+
+@keyframes load-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes load-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
@@ -245,6 +268,7 @@ p {
 }
 
 .playlist .player_buttons .player_button:hover {
+  cursor: pointer;
   animation: pop_animate 0.5s ease-in-out forwards;
 }
 

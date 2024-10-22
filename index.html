@@ -13,6 +13,7 @@
     <title>ramy zhang</title>
   </head>
   <body>
+    <script>0</script>
     <!-- the main contents of the website should all be contained within this wrapper -->
     <div class="wrapper">
       <!-- introductory header -->
@@ -53,31 +54,31 @@
             <!-- TODO: make minimized versions of song thumbnails for faster loading -->
             <div class="song" id="0">
               <img src="./assets/floorshot.jpg">
-              <p><a class="song_link" href="aboutme.html">about me</a></p>
+              <p>about me</p>
               <p id="song_length">2:13</p></div>
             <div class="song" id="1">
               <img src="./assets/bwheadshot.jpg">
-              <p><a class="song_link" href="projects.html">my projects</a></p>
+              <p>my projects</p>
               <p id="song_length">5:14</p></div>
             <div class="song" id="2">
               <img src="./assets/altheadshot.jpg">
-              <p><a class="song_link" href="blog/" target="_blank">my blog</a></p>
+              <p>my blog</p>
               <p id="song_length">3:43</p></div>
             <div class="song" id="3">
               <img src="./assets/headshot.jpg">
-              <p><a class="song_link" href="links.html">other links</a></p>
+              <p>other links</p>
               <p id="song_length">3:03</p></div>
           </div>
           <!-- music player-like buttons go here -->
           <div class="player_buttons">
-            <div class="player_button"><a id="go_back" href="links.html"><i class="fas fa-forward fa-flip-horizontal"></i></a></div>
-            <div class="player_button"><a id="pause_play" href="index.html"><i class="far fa-play-circle fa-2x" id="player_button"></i></a></div>
-            <div class="player_button"><a id="go_forward" href="aboutme.html"><i class="fas fa-forward"></i></a></div>
+            <div class="player_button" onclick="navigate(false)"><a id="go_back" href="links.html"><i class="fas fa-forward fa-flip-horizontal"></i></a></div>
+            <div class="player_button" onclick="navigateHome()"><a id="pause_play" href="index.html"><i class="far fa-play-circle fa-2x" id="player_button"></i></a></div>
+            <div class="player_button" onclick="navigate(true)"><a id="go_forward" href="aboutme.html"><i class="fas fa-forward"></i></a></div>
           </div>
         </div>
       </div>
     </div>
-  <script src="/js/index.js"></script>
-  <script type="module" src="/js/pageanimations.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/animate.js"></script>
   </body>
 </html>
