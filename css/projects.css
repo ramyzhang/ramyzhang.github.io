@@ -57,6 +57,7 @@ section {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  will-change: transform;
 }
 
 .highlights_header > i:hover {
@@ -261,6 +262,7 @@ section {
 
 .music_player .player_button {
   cursor: pointer;
+  will-change: transform;
 }
 
 .music_player .player_button:hover {

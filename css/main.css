@@ -139,6 +139,10 @@ span .light {
   cursor: pointer;
 }
 
+.back_button {
+  will-change: transform;
+}
+
 .back_button:hover {
   animation: player-pop 0.3s ease-in-out forwards;
 }
@@ -210,9 +214,15 @@ span .light {
   justify-content: center;
 }
 
+.song .player_buttons .player_button {
+  transition: transform 400ms;
+  will-change: transform;
+}
+
 .song .player_buttons .player_button:hover {
   cursor: pointer;
-  animation: player-pop 0.5s ease-in-out forwards;
+  transition: transform 200ms;
+  transform: scale(1.2);
 }
 
 @keyframes player-pop {

@@ -265,6 +265,7 @@ p {
   column-gap: 30px;
   margin-top: 20px;
   align-items: center;
+  will-change: transform;
 }
 
 .playlist .player_buttons .player_button:hover {
