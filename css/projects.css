@@ -209,6 +209,8 @@ section {
   padding: 20px;
   background-color: #e8dff5;
   margin-bottom: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 @media (min-width: 700px) {
